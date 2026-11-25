@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Parrela Music School — Private & Group Music Lessons</title>
+  <title>Parrela Music School — Private Music & Audio Production Lessons</title>
 
   <!-- Google Fonts: Outfit (Headings) & Space Mono (Monospace Details) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -43,7 +43,6 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Typography Helpers */
     .mono {
       font-family: var(--font-mono);
     }
@@ -88,7 +87,7 @@
     }
 
     h3 {
-      font-size: 1.45rem;
+      font-size: 1.35rem;
       font-weight: 700;
     }
 
@@ -106,11 +105,11 @@
       justify-content: center;
       gap: 0.5rem;
       font-family: var(--font-mono);
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.06em;
-      padding: 0.9rem 1.6rem;
+      padding: 0.9rem 1.55rem;
       border-radius: 6px;
       text-decoration: none;
       cursor: pointer;
@@ -139,12 +138,22 @@
       color: var(--bg-cream);
     }
 
+    .btn-light {
+      background-color: var(--bg-cream);
+      color: var(--primary-teal);
+    }
+
+    .btn-light:hover {
+      background-color: #FFFFFF;
+      transform: translateY(-2px);
+    }
+
     /* Navigation */
     header {
       position: sticky;
       top: 0;
       z-index: 100;
-      background-color: rgba(249, 249, 246, 0.94);
+      background-color: rgba(249, 249, 246, 0.95);
       backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--border-subtle);
     }
@@ -199,13 +208,13 @@
       display: flex;
       align-items: center;
       list-style: none;
-      gap: 2rem;
+      gap: 1.85rem;
     }
 
     nav a {
       text-decoration: none;
       font-family: var(--font-mono);
-      font-size: 0.85rem;
+      font-size: 0.84rem;
       color: var(--primary-teal);
       font-weight: 700;
       transition: color 0.2s ease;
@@ -271,8 +280,8 @@
 
     .hero-card h3 {
       color: var(--bg-cream);
-      margin-bottom: 1rem;
-      font-size: 1.6rem;
+      margin-bottom: 0.85rem;
+      font-size: 1.55rem;
     }
 
     .hero-specs {
@@ -283,7 +292,7 @@
 
     .hero-specs li {
       font-family: var(--font-mono);
-      font-size: 0.85rem;
+      font-size: 0.84rem;
       padding: 0.85rem 0;
       border-bottom: 1px solid rgba(249, 249, 246, 0.16);
       display: flex;
@@ -306,7 +315,7 @@
     }
 
     .section-header {
-      max-width: 680px;
+      max-width: 700px;
       margin-bottom: 3.25rem;
     }
 
@@ -320,15 +329,15 @@
     /* Instruments Grid */
     .cards-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.75rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
     }
 
     .card {
       background-color: #FFFFFF;
       border: 1px solid var(--border-subtle);
       border-radius: 10px;
-      padding: 2rem;
+      padding: 1.85rem;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -342,34 +351,48 @@
 
     .card-tag {
       font-family: var(--font-mono);
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: var(--accent-terracotta);
-      margin-bottom: 0.85rem;
+      margin-bottom: 0.75rem;
       display: block;
     }
 
     .card h3 {
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.65rem;
     }
 
     .card p {
       color: var(--text-muted);
-      font-size: 0.98rem;
-      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+      margin-bottom: 1.35rem;
     }
 
     .card-footer {
       font-family: var(--font-mono);
-      font-size: 0.8rem;
+      font-size: 0.76rem;
       color: var(--primary-teal);
-      padding-top: 1rem;
+      padding-top: 0.9rem;
       border-top: 1px dashed var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
     }
 
-    /* Why Us / Teaching Approach */
+    .card-footer a {
+      color: var(--accent-terracotta);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .card-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Teaching Approach */
     .pillars-section {
       background-color: var(--bg-cream-alt);
       border-top: 1px solid var(--border-subtle);
@@ -384,7 +407,7 @@
 
     .pillar-num {
       font-family: var(--font-mono);
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       font-weight: 700;
       color: var(--accent-terracotta);
       margin-bottom: 0.6rem;
@@ -400,64 +423,70 @@
       font-size: 0.98rem;
     }
 
-    /* About Instructor Panel */
-    .about-panel {
+    /* Faculty Preview Banner */
+    .faculty-banner {
       background-color: var(--primary-teal);
       color: var(--bg-cream);
       border-radius: 14px;
       padding: 3.5rem;
       display: grid;
-      grid-template-columns: 1fr 1.35fr;
+      grid-template-columns: 1.35fr 0.85fr;
       gap: 3rem;
       align-items: center;
       border-left: 6px solid var(--accent-terracotta);
     }
 
-    .about-photo-placeholder {
-      aspect-ratio: 4 / 5;
-      background-color: var(--primary-teal-dark);
-      border: 2px dashed rgba(249, 249, 246, 0.35);
-      border-radius: 10px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 1.5rem;
-      font-family: var(--font-mono);
-      font-size: 0.82rem;
-      color: rgba(249, 249, 246, 0.8);
-    }
-
-    .about-panel h2 {
+    .faculty-banner h2 {
       color: var(--bg-cream);
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
     }
 
-    .about-panel p {
+    .faculty-banner p {
       color: rgba(249, 249, 246, 0.88);
-      margin-bottom: 1.15rem;
-      font-size: 1.03rem;
+      font-size: 1.02rem;
+      margin-bottom: 1.75rem;
     }
 
-    .about-highlights {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-top: 1.5rem;
+    .faculty-roster-preview {
+      background-color: var(--primary-teal-dark);
+      border: 1px solid rgba(249, 249, 246, 0.16);
+      border-radius: 10px;
+      padding: 1.75rem;
     }
 
-    .badge {
+    .faculty-roster-preview h4 {
+      color: var(--accent-terracotta);
       font-family: var(--font-mono);
       font-size: 0.78rem;
-      padding: 0.45rem 0.85rem;
-      border-radius: 4px;
-      background-color: rgba(249, 249, 246, 0.1);
-      border: 1px solid rgba(249, 249, 246, 0.22);
-      color: var(--bg-cream);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 1rem;
     }
 
-    /* Lesson Formats & Rates */
+    .roster-list {
+      list-style: none;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+    }
+
+    .roster-list li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(249, 249, 246, 0.12);
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .roster-list li:last-child {
+      border-bottom: none;
+    }
+
+    .roster-list span:last-child {
+      color: rgba(249, 249, 246, 0.72);
+      text-align: right;
+    }
+
+    /* Rates */
     .rates-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
@@ -496,442 +525,3 @@
       font-size: 2rem;
       font-weight: 700;
       color: var(--primary-teal);
-      margin: 0.75rem 0;
-    }
-
-    .price span {
-      font-size: 0.85rem;
-      font-weight: 400;
-      color: var(--text-muted);
-    }
-
-    .rate-list {
-      list-style: none;
-      margin: 1.5rem 0 2rem;
-      font-family: var(--font-mono);
-      font-size: 0.85rem;
-      color: var(--text-muted);
-    }
-
-    .rate-list li {
-      padding: 0.5rem 0;
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    /* Contact & Booking */
-    .contact-section {
-      background-color: var(--bg-cream-alt);
-      border-top: 1px solid var(--border-subtle);
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.25fr;
-      gap: 3.5rem;
-      align-items: start;
-    }
-
-    .contact-details {
-      list-style: none;
-      margin-top: 2rem;
-    }
-
-    .contact-details li {
-      margin-bottom: 1.35rem;
-    }
-
-    .contact-details strong {
-      display: block;
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--accent-terracotta);
-      margin-bottom: 0.2rem;
-    }
-
-    .contact-details span {
-      font-family: var(--font-mono);
-      font-size: 0.95rem;
-      color: var(--primary-teal);
-    }
-
-    form.booking-form {
-      background-color: #FFFFFF;
-      padding: 2.5rem;
-      border-radius: 12px;
-      border: 1px solid var(--border-subtle);
-      border-top: 4px solid var(--primary-teal);
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    .form-group {
-      margin-bottom: 1.25rem;
-    }
-
-    label {
-      display: block;
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--primary-teal);
-      margin-bottom: 0.45rem;
-    }
-
-    input, select, textarea {
-      width: 100%;
-      padding: 0.8rem 0.95rem;
-      border: 1px solid var(--border-subtle);
-      border-radius: 6px;
-      background-color: var(--bg-cream);
-      font-family: var(--font-mono);
-      font-size: 0.9rem;
-      color: var(--text-main);
-    }
-
-    input:focus, select:focus, textarea:focus {
-      outline: none;
-      border-color: var(--accent-terracotta);
-    }
-
-    /* Footer */
-    footer {
-      background-color: var(--primary-teal);
-      color: rgba(249, 249, 246, 0.8);
-      padding: 2.75rem 0;
-      font-family: var(--font-mono);
-      font-size: 0.82rem;
-    }
-
-    .footer-inner {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    /* Responsive */
-    @media (max-width: 880px) {
-      .hero-grid,
-      .about-panel,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      nav ul {
-        display: none;
-      }
-
-      .about-panel {
-        padding: 2rem;
-      }
-
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- 1. TOP NAVIGATION -->
-  <header>
-    <div class="container nav-inner">
-      <a href="#" class="logo">
-        <div class="logo-mark">P</div>
-        <div class="logo-text">
-          Parrela Music School
-          <span>[STUDIO TAGLINE — e.g. Private Music Instruction]</span>
-        </div>
-      </a>
-
-      <nav>
-        <ul>
-          <li><a href="#lessons">Lessons</a></li>
-          <li><a href="#approach">Approach</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#rates">Rates</a></li>
-          <li><a href="#contact" class="btn btn-primary nav-cta">Book a Trial</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <!-- 2. HERO SECTION -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <span class="eyebrow">[CITY / NEIGHBORHOOD — e.g. Now Enrolling Students]</span>
-        <h1>[MAIN HEADLINE — e.g. Personalized Music Lessons for Every Stage.]</h1>
-        <p class="lead">
-          [HERO SUBHEADLINE — Write 2 sentences about who you teach (kids, teens, adults), what makes your studio welcoming, and your core instruments.]
-        </p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">Book a Free Trial Lesson</a>
-          <a href="#lessons" class="btn btn-outline">Explore Instruments</a>
-        </div>
-      </div>
-
-      <aside class="hero-card">
-        <span class="hero-card-label">Studio Snapshot</span>
-        <h3>Start Your Musical Journey</h3>
-        <p class="mono" style="font-size: 0.85rem; color: rgba(249,249,246,0.82);">
-          [SHORT NOTE — e.g. Tailored 1-on-1 instruction built around the music you actually want to play.]
-        </p>
-        <ul class="hero-specs">
-          <li><span>Levels</span><span>[e.g. Beginner to Advanced]</span></li>
-          <li><span>Ages</span><span>[e.g. Ages 5+ &amp; Adults]</span></li>
-          <li><span>Format</span><span>[e.g. In-Studio &amp; Online]</span></li>
-          <li><span>First Step</span><span>[e.g. Complimentary 30-Min Trial]</span></li>
-        </ul>
-      </aside>
-    </div>
-  </section>
-
-  <!-- 3. INSTRUMENTS & PROGRAMS -->
-  <section id="lessons">
-    <div class="container">
-      <div class="section-header">
-        <span class="eyebrow">Programs &amp; Instruments</span>
-        <h2>Lessons Tailored to Your Goals</h2>
-        <p>[INTRO LINE — Tell me which exact instruments/classes you teach so we can customize these cards.]</p>
-      </div>
-
-      <div class="cards-grid">
-        <article class="card">
-          <div>
-            <span class="card-tag">[INSTRUMENT 01 — e.g. All Ages]</span>
-            <h3>[Instrument 1 — e.g. Piano]</h3>
-            <p>[Write 2–3 sentences about what students learn: technique, reading music, chords, classical/contemporary songs.]</p>
-          </div>
-          <div class="card-footer">30 / 45 / 60 Min Weekly</div>
-        </article>
-
-        <article class="card">
-          <div>
-            <span class="card-tag">[INSTRUMENT 02 — e.g. Acoustic &amp; Electric]</span>
-            <h3>[Instrument 2 — e.g. Guitar]</h3>
-            <p>[Write 2–3 sentences about strumming, fingerstyle, scales, songwriting, or learning favorite songs.]</p>
-          </div>
-          <div class="card-footer">30 / 45 / 60 Min Weekly</div>
-        </article>
-
-        <article class="card">
-          <div>
-            <span class="card-tag">[INSTRUMENT 03 — e.g. Contemporary &amp; Classical]</span>
-            <h3>[Instrument 3 — e.g. Voice / Singing]</h3>
-            <p>[Write 2–3 sentences about breath control, vocal range, pitch accuracy, and stage confidence.]</p>
-          </div>
-          <div class="card-footer">30 / 45 / 60 Min Weekly</div>
-        </article>
-
-        <article class="card">
-          <div>
-            <span class="card-tag">[INSTRUMENT 04 — e.g. Rhythm &amp; Theory]</span>
-            <h3>[Instrument 4 — e.g. Drums or Music Theory]</h3>
-            <p>[Write 2–3 sentences or swap this card for another instrument you teach, like Violin, Bass, or Ukulele.]</p>
-          </div>
-          <div class="card-footer">30 / 45 / 60 Min Weekly</div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. TEACHING APPROACH -->
-  <section id="approach" class="pillars-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="eyebrow">Why Parrela Music School</span>
-        <h2>Built Around Consistency &amp; Joy</h2>
-        <p>[SUBTITLE — A short sentence about your teaching philosophy.]</p>
-      </div>
-
-      <div class="pillars-grid">
-        <div class="pillar">
-          <span class="pillar-num">01 / CUSTOM CURRICULUM</span>
-          <h3>[Pillar 1 Title — e.g. Music You Love]</h3>
-          <p>[Explain how you blend solid musical fundamentals with songs and genres each student is excited to play.]</p>
-        </div>
-
-        <div class="pillar">
-          <span class="pillar-num">02 / CLEAR PROGRESS</span>
-          <h3>[Pillar 2 Title — e.g. Structured Milestones]</h3>
-          <p>[Explain how students stay motivated with clear weekly practice goals, recitals, or recording projects.]</p>
-        </div>
-
-        <div class="pillar">
-          <span class="pillar-num">03 / FLEXIBLE LEARNING</span>
-          <h3>[Pillar 3 Title — e.g. Supportive Environment]</h3>
-          <p>[Explain your studio vibe, flexible scheduling/makeup policy, or option to switch between in-person and online.]</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. ABOUT THE INSTRUCTOR -->
-  <section id="about">
-    <div class="container">
-      <div class="about-panel">
-        <div class="about-photo-placeholder">
-          <strong>[INSTRUCTOR PHOTO]</strong><br />
-          Send a photo or tell me what image file you want to place here later.
-        </div>
-
-        <div>
-          <span class="eyebrow" style="color: var(--accent-terracotta);">Meet Your Teacher</span>
-          <h2>[INSTRUCTOR NAME — e.g. Daniel Parrela]</h2>
-          <p>
-            [BIO PARAGRAPH 1 — Share your musical background, how long you've been playing and teaching, and any degrees, certifications, or performance experience.]
-          </p>
-          <p>
-            [BIO PARAGRAPH 2 — Share why you started Parrela Music School and what students can expect in their very first lesson with you.]
-          </p>
-          <div class="about-highlights">
-            <span class="badge">[e.g. 10+ Years Teaching]</span>
-            <span class="badge">[e.g. All Skill Levels]</span>
-            <span class="badge">[e.g. Custom Lesson Plans]</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 6. LESSON FORMATS & RATES -->
-  <section id="rates">
-    <div class="container">
-      <div class="section-header">
-        <span class="eyebrow">Tuition &amp; Scheduling</span>
-        <h2>Simple, Transparent Lesson Options</h2>
-        <p>[NOTE — Tell me your actual prices and lesson lengths so we can put your real rates here.]</p>
-      </div>
-
-      <div class="rates-grid">
-        <div class="rate-card">
-          <span class="card-tag">Great for Beginners &amp; Young Kids</span>
-          <h3>30-Minute Weekly</h3>
-          <div class="price">$[XX] <span>/ lesson</span></div>
-          <ul class="rate-list">
-            <li>1-on-1 private instruction</li>
-            <li>Personalized weekly practice plan</li>
-            <li>Ideal for ages 5–10 or busy schedules</li>
-          </ul>
-          <a href="#contact" class="btn btn-outline" style="width: 100%;">Request Slot</a>
-        </div>
-
-        <div class="rate-card featured">
-          <span class="rate-badge">Most Popular</span>
-          <span class="card-tag">Balanced Depth &amp; Repertoire</span>
-          <h3>45-Minute Weekly</h3>
-          <div class="price">$[XX] <span>/ lesson</span></div>
-          <ul class="rate-list">
-            <li>1-on-1 private instruction</li>
-            <li>Technique, theory &amp; full songs</li>
-            <li>Recommended for teens &amp; adults</li>
-          </ul>
-          <a href="#contact" class="btn btn-primary" style="width: 100%;">Book Trial Lesson</a>
-        </div>
-
-        <div class="rate-card">
-          <span class="card-tag">Accelerated &amp; Advanced</span>
-          <h3>60-Minute Weekly</h3>
-          <div class="price">$[XX] <span>/ lesson</span></div>
-          <ul class="rate-list">
-            <li>Deep dive into repertoire &amp; improvisation</li>
-            <li>Audition or performance prep</li>
-            <li>Multi-instrument option available</li>
-          </ul>
-          <a href="#contact" class="btn btn-outline" style="width: 100%;">Request Slot</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 7. CONTACT & TRIAL BOOKING -->
-  <section id="contact" class="contact-section">
-    <div class="container contact-grid">
-      <div>
-        <span class="eyebrow">Get Started</span>
-        <h2>Book Your Trial Lesson</h2>
-        <p class="mono" style="font-size: 0.92rem; color: var(--text-muted); margin-top: 0.85rem;">
-          [CONTACT INTRO — e.g. Fill out the form with your instrument and preferred days, and we'll reach out within 24 hours to schedule your first session.]
-        </p>
-
-        <ul class="contact-details">
-          <li>
-            <strong>Studio Location</strong>
-            <span>[YOUR CITY / ADDRESS — e.g. Downtown Studio or Online via Zoom]</span>
-          </li>
-          <li>
-            <strong>Teaching Hours</strong>
-            <span>[YOUR HOURS — e.g. Mon–Fri: 2:00 PM – 8:00 PM | Sat: 9:00 AM – 3:00 PM]</span>
-          </li>
-          <li>
-            <strong>Email &amp; Phone</strong>
-            <span>[YOUR EMAIL &amp; PHONE — e.g. hello@parrelamusicschool.com | (555) 123-4567]</span>
-          </li>
-        </ul>
-      </div>
-
-      <form class="booking-form" onsubmit="event.preventDefault(); alert('Thanks! Replace this alert with your real email/Formspree handler when ready.');">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">Student / Parent Name</label>
-            <input type="text" id="name" name="name" placeholder="Your full name" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="you@example.com" required />
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="instrument">Instrument</label>
-            <select id="instrument" name="instrument">
-              <option value="piano">Piano</option>
-              <option value="guitar">Guitar</option>
-              <option value="voice">Voice / Singing</option>
-              <option value="other">Other / Not Sure Yet</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="level">Experience Level</label>
-            <select id="level" name="level">
-              <option value="beginner">Complete Beginner</option>
-              <option value="intermediate">Intermediate</option>
-              <option value="advanced">Advanced</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="message">Goals &amp; Preferred Days</label>
-          <textarea id="message" name="message" rows="4" placeholder="Tell us student age, musical interests, and days/times that work best..."></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Inquiry</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container footer-inner">
-      <div>&copy; <span id="year"></span> Parrela Music School. All rights reserved.</div>
-      <div>[CITY, STATE] &bull; [EMAIL ADDRESS]</div>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
