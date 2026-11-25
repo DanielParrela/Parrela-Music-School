@@ -1,1 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meet the Teachers — Parrela Music School</title>
 
+  <!-- Google Fonts: Outfit (Headings) & Space Mono (Monospace Details) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-cream: #F9F9F6;
+      --bg-cream-alt: #F1F0EA;
+      --primary-teal: #005B5C;
+      --primary-teal-dark: #004344;
+      --accent-terracotta: #D95D39;
+      --accent-terracotta-hover: #C04D2B;
+      --text-main: #182626;
+      --text-muted: #4A5D5D;
+      --border-subtle: rgba(0, 91, 92, 0.16);
+      --font-heading: 'Outfit', sans-serif;
+      --font-mono: 'Space Mono', monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      font-family: var(--font-heading);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-terracotta);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .eyebrow::before {
+      content: "";
+      display: inline-block;
+      width: 24px;
+      height: 2px;
+      background-color: var(--accent-terracotta);
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-heading);
+      color: var(--primary-teal);
+      line-height: 1.15;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      font-size: 1.45rem;
+      font-weight: 700;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.8rem 1.4rem;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: 2px solid transparent;
+    }
+
+    .btn-primary {
+      background-color: var(--accent-terracotta);
+      color: #FFFFFF;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-terracotta-hover);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--primary-teal);
+      border-color: var(--primary-teal);
+    }
+
+    .btn-outline:hover {
+      background-color: var(--primary-teal);
+      color: var(--bg-cream);
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(249, 249, 246, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 78px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--primary-teal);
+    }
+
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      background-color: var(--primary-teal);
+      color: var(--bg-cream);
+      display: grid;
+      place-items: center;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.25rem;
+      border-bottom: 3px solid var(--accent-terracotta);
+    }
+
+    .logo-text {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: -0.01em;
+    }
+
+    .logo-text span {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 400;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-terracotta);
+    }
+
+    nav ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 1.85rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 0.84rem;
+      color: var(--primary-teal);
+      font-weight: 700;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: var(--accent-terracotta);
+    }
+
+    .nav-cta {
+      padding: 0.6rem 1.15rem;
+      font-size: 0.78rem;
+    }
+
+    /* Page Hero */
+    .page-hero {
+      padding: 4.5rem 0 3.25rem;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .page-hero p {
+      font-family: var(--font-mono);
+      font-size: 0.96rem;
+      color: var(--text-muted);
+      max-width: 64ch;
+      margin-top: 1rem;
+    }
+
+    /* Filter Bar */
+    .filter-bar {
+      padding: 2rem 0 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      align-items: center;
+    }
+
+    .filter-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-right: 0.5rem;
+    }
+
+    .filter-btn {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.5rem 0.95rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      background-color: #FFFFFF;
+      color: var(--primary-teal);
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+
+    .filter-btn:hover {
+      border-color: var(--accent-terracotta);
+      color: var(--accent-terracotta);
+    }
+
+    .filter-btn.active {
+      background-color: var(--primary-teal);
+      color: var(--bg-cream);
+      border-color: var(--primary-teal);
+    }
+
+    /* Teachers Grid */
+    .teachers-section {
+      padding: 2rem 0 5.5rem;
+    }
+
+    .teachers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: 2rem;
+    }
+
+    .teacher-card {
+      background-color: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .teacher-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-terracotta);
+    }
+
+    .teacher-card.hidden {
+      display: none;
+    }
+
+    .teacher-photo {
+      height: 220px;
+      background-color: var(--primary-teal);
+      color: rgba(249, 249, 246, 0.85);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      border-bottom: 4px solid var(--accent-terracotta);
+      position: relative;
+    }
+
+    .teacher-initials {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background-color: rgba(249, 249, 246, 0.12);
+      border: 2px solid var(--accent-terracotta);
+      display: grid;
+      place-items: center;
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--bg-cream);
+      margin-bottom: 0.65rem;
+    }
+
+    .teacher-body {
+      padding: 1.85rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .instrument-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .inst-tag {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      background-color: rgba(217, 93, 57, 0.12);
+      color: var(--accent-terracotta);
+    }
+
+    .teacher-body h3 {
+      margin-bottom: 0.35rem;
+    }
+
+    .teacher-role {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
