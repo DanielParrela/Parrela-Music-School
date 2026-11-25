@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "parrelamusicschool",
     "public": ".",
     "ignore": [
       "firebase.json",
