@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Parrella Music School | Palo Alto Music Lessons</title>
+  <title>Parrela Music School | Palo Alto Music Lessons</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
@@ -362,13 +362,22 @@
 
     .rate-price {
       font-family: 'Space Mono', monospace;
-      font-size: 2.1rem;
+      font-size: 1.95rem;
       font-weight: 700;
       color: var(--teal);
       margin: 14px 0;
     }
 
-    .rate-price span {
+    .rate-price .starting-label {
+      display: block;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--terracotta);
+      margin-bottom: 2px;
+    }
+
+    .rate-price span.unit {
       font-size: 0.9rem;
       font-weight: 400;
       color: var(--muted);
@@ -387,6 +396,13 @@
       content: "✓ ";
       color: var(--terracotta);
       font-weight: 700;
+    }
+
+    .rates-note {
+      margin-top: 24px;
+      text-align: center;
+      font-size: 0.92rem;
+      color: rgba(249, 249, 246, 0.82);
     }
 
     /* CONTACT */
@@ -506,7 +522,7 @@
     <div class="container nav-inner">
       <a href="index.html" class="brand">
         <span class="brand-dot"></span>
-        Parrella Music School
+        Parrela Music School
       </a>
       <ul class="nav-links">
         <li><a href="#instruments">Instruments</a></li>
@@ -599,7 +615,7 @@
         <span class="mono-tag">OUR APPROACH</span>
         <h2>Personal Mentorship, Not Cookie-Cutter Drills.</h2>
         <p style="margin-bottom: 18px;">
-          At Parrella Music School, every student learns differently. We pair strong musical fundamentals with the songs, styles, and creative goals that actually keep you excited to practice.
+          At Parrela Music School, every student learns differently. We pair strong musical fundamentals with the songs, styles, and creative goals that actually keep you excited to practice.
         </p>
         <p style="margin-bottom: 28px;">
           Our faculty consists of working performers, composers, and educators in the Palo Alto area who bring real-world musicianship into every weekly session.
@@ -638,7 +654,10 @@
           <div>
             <span class="mono-label">STARTER</span>
             <h3>30-Minute Lesson</h3>
-            <div class="rate-price">$[XX] <span>/ session</span></div>
+            <div class="rate-price">
+              <span class="starting-label">Starting at</span>
+              $30.00 <span class="unit">/ session</span>
+            </div>
             <p>Ideal for younger beginners building focus and foundational habits.</p>
             <ul class="rate-features">
               <li>Weekly 1-on-1 private instruction</li>
@@ -653,7 +672,10 @@
           <div>
             <span class="mono-label">MOST POPULAR</span>
             <h3>45-Minute Lesson</h3>
-            <div class="rate-price">$[XX] <span>/ session</span></div>
+            <div class="rate-price">
+              <span class="starting-label">Starting at</span>
+              $37.50 <span class="unit">/ session</span>
+            </div>
             <p>Balanced depth for developing technique, repertoire, and theory.</p>
             <ul class="rate-features">
               <li>Weekly 1-on-1 private instruction</li>
@@ -668,7 +690,10 @@
           <div>
             <span class="mono-label">INTENSIVE</span>
             <h3>60-Minute Lesson</h3>
-            <div class="rate-price">$[XX] <span>/ session</span></div>
+            <div class="rate-price">
+              <span class="starting-label">Starting at</span>
+              $45.00 <span class="unit">/ session</span>
+            </div>
             <p>Best for dedicated teens, adults, multi-instrumentalists, and production.</p>
             <ul class="rate-features">
               <li>Full hour of deep-dive mentorship</li>
@@ -679,6 +704,8 @@
           <a href="#contact" class="btn btn-secondary" style="width: 100%;">Inquire Now</a>
         </div>
       </div>
+
+      <p class="rates-note">* Rates vary slightly depending on instrument and instructor.</p>
     </div>
   </section>
 
@@ -714,7 +741,7 @@
         <div class="contact-form-card">
           <form id="lessonForm" action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="7cea56fa-3fa7-49e9-aa32-db47715a5310">
-            <input type="hidden" name="subject" value="New Lesson Inquiry - Parrella Music School">
+            <input type="hidden" name="subject" value="New Lesson Inquiry - Parrela Music School">
             <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
             <div class="form-group">
@@ -752,7 +779,7 @@
               <div class="form-group">
                 <label for="teacher">Preferred Teacher</label>
                 <select id="teacher" name="teacher">
-                  <option value="Match me! (Best Fit)">Match me! (Best Fit)</option>
+                  <option value="No Preference">No Preference</option>
                   <option value="Daniel Parrela">Daniel Parrela (Piano)</option>
                   <option value="Lily Chen">Lily Chen (Piano)</option>
                   <option value="Sarah Coelho">Sarah Coelho (Guitar / Uke)</option>
@@ -783,7 +810,7 @@
   <footer>
     <div class="container footer-inner">
       <div>
-        <strong style="color: #FFFFFF;">Parrella Music School</strong> • Palo Alto, CA
+        <strong style="color: #FFFFFF;">Parrela Music School</strong> • Palo Alto, CA
       </div>
       <div class="footer-links">
         <a href="#instruments">Instruments</a>
@@ -839,4 +866,4 @@
   </script>
 
 </body>
-</html><!--  -->
+</html>
