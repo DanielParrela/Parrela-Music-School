@@ -3,26 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Parrela Music School — Private Music & Audio Production Lessons</title>
-
-  <!-- Google Fonts: Outfit (Headings) & Space Mono (Monospace Details) -->
+  <title>Parrella Music School | Palo Alto Music Lessons</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg-cream: #F9F9F6;
-      --bg-cream-alt: #F1F0EA;
-      --primary-teal: #005B5C;
-      --primary-teal-dark: #004344;
-      --accent-terracotta: #D95D39;
-      --accent-terracotta-hover: #C04D2B;
-      --text-main: #182626;
-      --text-muted: #4A5D5D;
+      --teal: #005B5C;
+      --teal-dark: #004344;
+      --cream: #F9F9F6;
+      --cream-alt: #F0EFEA;
+      --terracotta: #D95D39;
+      --terracotta-dark: #B84929;
+      --ink: #1A2424;
+      --muted: #526161;
       --border-subtle: rgba(0, 91, 92, 0.16);
-      --font-heading: 'Outfit', sans-serif;
-      --font-mono: 'Space Mono', monospace;
+      --radius: 14px;
     }
 
     * {
@@ -36,125 +32,80 @@
     }
 
     body {
-      background-color: var(--bg-cream);
-      color: var(--text-main);
-      font-family: var(--font-heading);
+      background-color: var(--cream);
+      color: var(--ink);
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
-    }
-
-    .mono {
-      font-family: var(--font-mono);
-    }
-
-    .eyebrow {
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent-terracotta);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .eyebrow::before {
-      content: "";
-      display: inline-block;
-      width: 24px;
-      height: 2px;
-      background-color: var(--accent-terracotta);
-    }
-
-    h1, h2, h3, h4 {
-      font-family: var(--font-heading);
-      color: var(--primary-teal);
-      line-height: 1.15;
-    }
-
-    h1 {
-      font-size: clamp(2.5rem, 5vw, 4.1rem);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
-
-    h2 {
-      font-size: clamp(2rem, 3.5vw, 2.8rem);
-      font-weight: 700;
-      letter-spacing: -0.015em;
-    }
-
-    h3 {
-      font-size: 1.35rem;
-      font-weight: 700;
     }
 
     .container {
       width: 100%;
       max-width: 1140px;
       margin: 0 auto;
-      padding: 0 1.5rem;
+      padding: 0 24px;
     }
 
-    /* Buttons */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      font-family: var(--font-mono);
-      font-size: 0.85rem;
-      font-weight: 700;
+    .section-padding {
+      padding: 88px 0;
+    }
+
+    .mono-tag,
+    .mono-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
-      padding: 0.9rem 1.55rem;
-      border-radius: 6px;
-      text-decoration: none;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      border: 2px solid transparent;
+      font-weight: 700;
+      display: inline-block;
     }
 
-    .btn-primary {
-      background-color: var(--accent-terracotta);
-      color: #FFFFFF;
+    .mono-tag {
+      color: var(--terracotta);
+      margin-bottom: 12px;
     }
 
-    .btn-primary:hover {
-      background-color: var(--accent-terracotta-hover);
-      transform: translateY(-2px);
+    .mono-label {
+      color: var(--teal);
+      margin-bottom: 4px;
     }
 
-    .btn-outline {
-      background-color: transparent;
-      color: var(--primary-teal);
-      border-color: var(--primary-teal);
+    h1, h2, h3 {
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--ink);
     }
 
-    .btn-outline:hover {
-      background-color: var(--primary-teal);
-      color: var(--bg-cream);
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      margin-bottom: 20px;
     }
 
-    .btn-light {
-      background-color: var(--bg-cream);
-      color: var(--primary-teal);
+    h2 {
+      font-size: clamp(1.9rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      margin-bottom: 16px;
     }
 
-    .btn-light:hover {
-      background-color: #FFFFFF;
-      transform: translateY(-2px);
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 8px;
     }
 
-    /* Navigation */
+    p {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    /* NAVIGATION */
     header {
       position: sticky;
       top: 0;
       z-index: 100;
-      background-color: rgba(249, 249, 246, 0.95);
-      backdrop-filter: blur(8px);
+      background-color: rgba(249, 249, 246, 0.94);
+      backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border-subtle);
     }
 
@@ -162,481 +113,351 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 78px;
+      height: 76px;
     }
 
-    .logo {
+    .brand {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 10px;
       text-decoration: none;
-      color: var(--primary-teal);
-    }
-
-    .logo-mark {
-      width: 38px;
-      height: 38px;
-      border-radius: 8px;
-      background-color: var(--primary-teal);
-      color: var(--bg-cream);
-      display: grid;
-      place-items: center;
-      font-family: var(--font-heading);
+      color: var(--teal);
       font-weight: 800;
       font-size: 1.25rem;
-      border-bottom: 3px solid var(--accent-terracotta);
+      letter-spacing: -0.02em;
     }
 
-    .logo-text {
-      font-family: var(--font-heading);
-      font-weight: 800;
-      font-size: 1.25rem;
-      letter-spacing: -0.01em;
+    .brand-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: var(--terracotta);
+      display: inline-block;
     }
 
-    .logo-text span {
-      display: block;
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      font-weight: 400;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--accent-terracotta);
-    }
-
-    nav ul {
+    .nav-links {
       display: flex;
       align-items: center;
+      gap: 28px;
       list-style: none;
-      gap: 1.85rem;
     }
 
-    nav a {
+    .nav-links a {
       text-decoration: none;
-      font-family: var(--font-mono);
-      font-size: 0.84rem;
-      color: var(--primary-teal);
-      font-weight: 700;
+      color: var(--ink);
+      font-weight: 500;
+      font-size: 0.98rem;
       transition: color 0.2s ease;
     }
 
-    nav a:hover {
-      color: var(--accent-terracotta);
+    .nav-links a:hover {
+      color: var(--terracotta);
     }
 
-    .nav-cta {
-      padding: 0.6rem 1.15rem;
-      font-size: 0.78rem;
+    /* BUTTONS */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 26px;
+      border-radius: 999px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 0.98rem;
+      text-decoration: none;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: all 0.2s ease;
     }
 
-    /* Hero Section */
+    .btn-primary {
+      background-color: var(--terracotta);
+      color: #FFFFFF;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--terracotta-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--teal);
+      border-color: var(--teal);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--teal);
+      color: #FFFFFF;
+    }
+
+    .btn-sm {
+      padding: 9px 18px;
+      font-size: 0.9rem;
+    }
+
+    /* HERO */
     .hero {
-      padding: 5.5rem 0 4.5rem;
+      padding: 96px 0 88px;
       border-bottom: 1px solid var(--border-subtle);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.25fr 0.85fr;
-      gap: 3.5rem;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 48px;
       align-items: center;
     }
 
     .hero p.lead {
-      font-family: var(--font-mono);
-      font-size: 1rem;
-      color: var(--text-muted);
-      margin: 1.5rem 0 2.25rem;
-      max-width: 56ch;
+      font-size: 1.2rem;
+      max-width: 580px;
+      margin-bottom: 32px;
+      color: var(--muted);
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 14px;
     }
 
     .hero-card {
-      background-color: var(--primary-teal);
-      color: var(--bg-cream);
-      padding: 2.25rem;
-      border-radius: 12px;
-      border-top: 5px solid var(--accent-terracotta);
-      box-shadow: 0 18px 36px rgba(0, 91, 92, 0.14);
+      background-color: var(--teal);
+      color: var(--cream);
+      padding: 36px;
+      border-radius: var(--radius);
+      box-shadow: 0 18px 40px rgba(0, 91, 92, 0.14);
     }
 
-    .hero-card-label {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--accent-terracotta);
-      background: rgba(249, 249, 246, 0.08);
-      display: inline-block;
-      padding: 0.35rem 0.7rem;
-      border-radius: 4px;
-      margin-bottom: 1.25rem;
+    .hero-card .mono-tag {
+      color: #F4A28C;
     }
 
     .hero-card h3 {
-      color: var(--bg-cream);
-      margin-bottom: 0.85rem;
+      color: #FFFFFF;
       font-size: 1.55rem;
+      margin-bottom: 14px;
     }
 
-    .hero-specs {
-      list-style: none;
-      margin-top: 1.25rem;
-      border-top: 1px solid rgba(249, 249, 246, 0.16);
+    .hero-card p {
+      color: rgba(249, 249, 246, 0.85);
+      font-size: 0.98rem;
+      margin-bottom: 22px;
     }
 
-    .hero-specs li {
-      font-family: var(--font-mono);
-      font-size: 0.84rem;
-      padding: 0.85rem 0;
-      border-bottom: 1px solid rgba(249, 249, 246, 0.16);
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
+    .hero-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(249, 249, 246, 0.18);
     }
 
-    .hero-specs li span:first-child {
-      color: rgba(249, 249, 246, 0.72);
-    }
-
-    .hero-specs li span:last-child {
+    .stat-num {
+      font-family: 'Space Mono', monospace;
+      font-size: 1.45rem;
       font-weight: 700;
-      text-align: right;
+      color: #FFFFFF;
+      display: block;
     }
 
-    /* Sections General */
-    section {
-      padding: 5.5rem 0;
+    .stat-desc {
+      font-size: 0.85rem;
+      color: rgba(249, 249, 246, 0.8);
+    }
+
+    /* INSTRUMENTS */
+    .instruments-section {
+      background-color: var(--cream-alt);
+      border-bottom: 1px solid var(--border-subtle);
     }
 
     .section-header {
-      max-width: 700px;
-      margin-bottom: 3.25rem;
+      max-width: 640px;
+      margin-bottom: 48px;
     }
 
-    .section-header p {
-      font-family: var(--font-mono);
-      font-size: 0.95rem;
-      color: var(--text-muted);
-      margin-top: 0.9rem;
-    }
-
-    /* Instruments Grid */
-    .cards-grid {
+    .instrument-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
     }
 
-    .card {
-      background-color: #FFFFFF;
+    .instrument-card {
+      background-color: var(--cream);
       border: 1px solid var(--border-subtle);
-      border-radius: 10px;
-      padding: 1.85rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      border-radius: var(--radius);
+      padding: 26px;
       transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
-    .card:hover {
-      transform: translateY(-4px);
-      border-color: var(--accent-terracotta);
+    .instrument-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--teal);
     }
 
-    .card-tag {
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--accent-terracotta);
-      margin-bottom: 0.75rem;
-      display: block;
+    .instrument-card .mono-label {
+      font-size: 0.72rem;
     }
 
-    .card h3 {
-      margin-bottom: 0.65rem;
-    }
-
-    .card p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      margin-bottom: 1.35rem;
-    }
-
-    .card-footer {
-      font-family: var(--font-mono);
-      font-size: 0.76rem;
-      color: var(--primary-teal);
-      padding-top: 0.9rem;
-      border-top: 1px dashed var(--border-subtle);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .card-footer a {
-      color: var(--accent-terracotta);
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    .card-footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* Teaching Approach */
-    .pillars-section {
-      background-color: var(--bg-cream-alt);
-      border-top: 1px solid var(--border-subtle);
-      border-bottom: 1px solid var(--border-subtle);
-    }
-
-    .pillars-grid {
+    /* ABOUT */
+    .about-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2.25rem;
-    }
-
-    .pillar-num {
-      font-family: var(--font-mono);
-      font-size: 0.92rem;
-      font-weight: 700;
-      color: var(--accent-terracotta);
-      margin-bottom: 0.6rem;
-      display: block;
-    }
-
-    .pillar h3 {
-      margin-bottom: 0.65rem;
-    }
-
-    .pillar p {
-      color: var(--text-muted);
-      font-size: 0.98rem;
-    }
-
-    /* Faculty Preview Banner */
-    .faculty-banner {
-      background-color: var(--primary-teal);
-      color: var(--bg-cream);
-      border-radius: 14px;
-      padding: 3.5rem;
-      display: grid;
-      grid-template-columns: 1.35fr 0.85fr;
-      gap: 3rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
       align-items: center;
-      border-left: 6px solid var(--accent-terracotta);
     }
 
-    .faculty-banner h2 {
-      color: var(--bg-cream);
-      margin-bottom: 1rem;
+    .about-pillars {
+      display: grid;
+      gap: 18px;
     }
 
-    .faculty-banner p {
-      color: rgba(249, 249, 246, 0.88);
-      font-size: 1.02rem;
-      margin-bottom: 1.75rem;
+    .pillar-box {
+      background-color: var(--cream-alt);
+      padding: 22px 24px;
+      border-radius: var(--radius);
+      border-left: 4px solid var(--terracotta);
     }
 
-    .faculty-roster-preview {
-      background-color: var(--primary-teal-dark);
-      border: 1px solid rgba(249, 249, 246, 0.16);
-      border-radius: 10px;
-      padding: 1.75rem;
+    /* RATES */
+    .rates-section {
+      background-color: var(--teal);
+      color: var(--cream);
     }
 
-    .faculty-roster-preview h4 {
-      color: var(--accent-terracotta);
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-bottom: 1rem;
+    .rates-section h2 {
+      color: #FFFFFF;
     }
 
-    .roster-list {
-      list-style: none;
-      font-family: var(--font-mono);
-      font-size: 0.82rem;
+    .rates-section .section-header p {
+      color: rgba(249, 249, 246, 0.82);
     }
 
-    .roster-list li {
-      padding: 0.5rem 0;
-      border-bottom: 1px solid rgba(249, 249, 246, 0.12);
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
+    .rates-section .mono-tag {
+      color: #F4A28C;
     }
 
-    .roster-list li:last-child {
-      border-bottom: none;
-    }
-
-    .roster-list span:last-child {
-      color: rgba(249, 249, 246, 0.72);
-      text-align: right;
-    }
-
-    /* Rates */
     .rates-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 1.75rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
     }
 
     .rate-card {
-      background-color: #FFFFFF;
-      border: 1px solid var(--border-subtle);
-      border-radius: 10px;
-      padding: 2.25rem;
+      background-color: var(--cream);
+      color: var(--ink);
+      border-radius: var(--radius);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .rate-card.featured {
-      border: 2px solid var(--primary-teal);
+      border: 3px solid var(--terracotta);
       position: relative;
     }
 
-    .rate-badge {
-      position: absolute;
-      top: -13px;
-      right: 20px;
-      background-color: var(--accent-terracotta);
-      color: #FFFFFF;
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
+    .rate-price {
+      font-family: 'Space Mono', monospace;
+      font-size: 2.1rem;
       font-weight: 700;
-      padding: 0.25rem 0.75rem;
-      border-radius: 4px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
+      color: var(--teal);
+      margin: 14px 0;
     }
 
-    .price {
-      font-family: var(--font-mono);
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--primary-teal);
-      margin: 0.75rem 0;
-    }
-
-    .price span {
-      font-size: 0.85rem;
+    .rate-price span {
+      font-size: 0.9rem;
       font-weight: 400;
-      color: var(--text-muted);
+      color: var(--muted);
     }
 
-    .rate-list {
+    .rate-features {
       list-style: none;
-      margin: 1.5rem 0 2rem;
-      font-family: var(--font-mono);
-      font-size: 0.85rem;
-      color: var(--text-muted);
+      margin: 18px 0 26px;
+      display: grid;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 0.96rem;
     }
 
-    .rate-list li {
-      padding: 0.5rem 0;
-      border-bottom: 1px solid var(--border-subtle);
+    .rate-features li::before {
+      content: "✓ ";
+      color: var(--terracotta);
+      font-weight: 700;
     }
 
-    /* Contact & Booking */
-    .contact-section {
-      background-color: var(--bg-cream-alt);
-      border-top: 1px solid var(--border-subtle);
-    }
-
+    /* CONTACT */
     .contact-grid {
       display: grid;
-      grid-template-columns: 1fr 1.25fr;
-      gap: 3.5rem;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 48px;
       align-items: start;
     }
 
-    .contact-details {
-      list-style: none;
-      margin-top: 2rem;
+    .info-list {
+      margin-top: 28px;
+      display: grid;
+      gap: 20px;
     }
 
-    .contact-details li {
-      margin-bottom: 1.35rem;
+    .info-item p {
+      color: var(--ink);
+      font-weight: 500;
     }
 
-    .contact-details strong {
-      display: block;
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--accent-terracotta);
-      margin-bottom: 0.2rem;
-    }
-
-    .contact-details span {
-      font-family: var(--font-mono);
-      font-size: 0.95rem;
-      color: var(--primary-teal);
-    }
-
-    form.booking-form {
+    .contact-form-card {
       background-color: #FFFFFF;
-      padding: 2.5rem;
-      border-radius: 12px;
       border: 1px solid var(--border-subtle);
-      border-top: 4px solid var(--primary-teal);
+      border-radius: var(--radius);
+      padding: 34px;
+      box-shadow: 0 12px 30px rgba(0, 91, 92, 0.06);
+    }
+
+    .form-group {
+      margin-bottom: 18px;
     }
 
     .form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    .form-group {
-      margin-bottom: 1.25rem;
+      gap: 16px;
     }
 
     label {
       display: block;
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--primary-teal);
-      margin-bottom: 0.45rem;
+      font-weight: 600;
+      font-size: 0.92rem;
+      margin-bottom: 6px;
+      color: var(--ink);
     }
 
     input, select, textarea {
       width: 100%;
-      padding: 0.8rem 0.95rem;
+      padding: 12px 14px;
       border: 1px solid var(--border-subtle);
-      border-radius: 6px;
-      background-color: var(--bg-cream);
-      font-family: var(--font-mono);
-      font-size: 0.9rem;
-      color: var(--text-main);
+      border-radius: 10px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.98rem;
+      background-color: var(--cream);
+      color: var(--ink);
+      transition: border-color 0.2s ease;
     }
 
     input:focus, select:focus, textarea:focus {
       outline: none;
-      border-color: var(--accent-terracotta);
+      border-color: var(--teal);
+      background-color: #FFFFFF;
     }
 
-    /* Footer */
+    /* FOOTER */
     footer {
-      background-color: var(--primary-teal);
-      color: rgba(249, 249, 246, 0.8);
-      padding: 2.75rem 0;
-      font-family: var(--font-mono);
-      font-size: 0.82rem;
+      background-color: var(--ink);
+      color: rgba(249, 249, 246, 0.75);
+      padding: 40px 0;
+      font-size: 0.92rem;
     }
 
     .footer-inner {
@@ -644,405 +465,378 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      gap: 1rem;
+      gap: 16px;
     }
 
-    @media (max-width: 900px) {
+    .footer-links {
+      display: flex;
+      gap: 22px;
+    }
+
+    .footer-links a {
+      color: rgba(249, 249, 246, 0.75);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: #FFFFFF;
+    }
+
+    @media (max-width: 860px) {
       .hero-grid,
-      .faculty-banner,
+      .about-grid,
       .contact-grid {
         grid-template-columns: 1fr;
       }
 
-      nav ul {
-        display: none;
-      }
-
-      .faculty-banner {
-        padding: 2.25rem;
-      }
-
       .form-row {
         grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        gap: 16px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- 1. TOP NAVIGATION -->
+  <!-- NAVIGATION -->
   <header>
     <div class="container nav-inner">
-      <a href="index.html" class="logo">
-        <div class="logo-mark">P</div>
-        <div class="logo-text">
-          Parrela Music School
-          <span>[STUDIO TAGLINE — e.g. Private Music &amp; Production]</span>
-        </div>
+      <a href="index.html" class="brand">
+        <span class="brand-dot"></span>
+        Parrella Music School
       </a>
-
-      <nav>
-        <ul>
-          <li><a href="#lessons">Instruments</a></li>
-          <li><a href="teachers.html">Meet the Teachers</a></li>
-          <li><a href="#approach">Approach</a></li>
-          <li><a href="#rates">Rates</a></li>
-          <li><a href="#contact" class="btn btn-primary nav-cta">Book a Trial</a></li>
-        </ul>
-      </nav>
+      <ul class="nav-links">
+        <li><a href="#instruments">Instruments</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#rates">Rates</a></li>
+        <li><a href="teachers.html">Teachers</a></li>
+        <li><a href="#contact" class="btn btn-primary btn-sm">Book a Lesson</a></li>
+      </ul>
     </div>
   </header>
 
-  <!-- 2. HERO SECTION -->
+  <!-- HERO SECTION -->
   <section class="hero">
     <div class="container hero-grid">
       <div>
-        <span class="eyebrow">[CITY / LOCATION — e.g. Now Enrolling Students]</span>
-        <h1>[MAIN HEADLINE — e.g. Personalized Music Lessons for Every Stage.]</h1>
+        <span class="mono-tag">PALO ALTO • IN-STUDIO &amp; ONLINE</span>
+        <h1>Private Music Lessons Built Around How You Learn.</h1>
         <p class="lead">
-          [HERO SUBHEADLINE — Write 2 sentences introducing Parrela Music School, your multi-instrument faculty, and who you teach (kids, teens, adults; beginners to advanced).]
+          One-on-one instruction in piano, guitar, strings, woodwinds, brass, and audio production with dedicated Palo Alto musicians.
         </p>
         <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">Book a Free Trial Lesson</a>
-          <a href="teachers.html" class="btn btn-outline">Meet Our Teachers</a>
+          <a href="#contact" class="btn btn-primary">Book an Intro Lesson</a>
+          <a href="teachers.html" class="btn btn-secondary">Meet the Teachers</a>
         </div>
       </div>
 
-      <aside class="hero-card">
-        <span class="hero-card-label">Studio Snapshot</span>
-        <h3>8 Programs. Dedicated Faculty.</h3>
-        <p class="mono" style="font-size: 0.85rem; color: rgba(249,249,246,0.82);">
-          [SHORT NOTE — e.g. 1-on-1 instruction tailored around the music and creative goals you care about most.]
+      <div class="hero-card">
+        <span class="mono-tag">NOW ENROLLING</span>
+        <h3>All Ages &amp; Skill Levels</h3>
+        <p>
+          Whether you are picking up an instrument for the very first time or preparing for auditions and recording sessions, we match you with the right instructor.
         </p>
-        <ul class="hero-specs">
-          <li><span>Programs</span><span>Piano, Strings, Winds &amp; Production</span></li>
-          <li><span>Levels</span><span>[e.g. Beginner to Advanced]</span></li>
-          <li><span>Ages</span><span>[e.g. Kids, Teens &amp; Adults]</span></li>
-          <li><span>Format</span><span>[e.g. In-Studio &amp; Online]</span></li>
-        </ul>
-      </aside>
+        <div class="hero-stats">
+          <div>
+            <span class="stat-num">9</span>
+            <span class="stat-desc">Active Faculty</span>
+          </div>
+          <div>
+            <span class="stat-num">8</span>
+            <span class="stat-desc">Instruments &amp; Prod.</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- 3. INSTRUMENTS & PROGRAMS -->
-  <section id="lessons">
+  <!-- INSTRUMENTS SECTION -->
+  <section id="instruments" class="section-padding instruments-section">
     <div class="container">
       <div class="section-header">
-        <span class="eyebrow">Programs &amp; Instruments</span>
-        <h2>Lessons Tailored to Your Goals</h2>
-        <p>Explore our full range of private lessons—from classical strings and winds to contemporary guitar, piano, and modern audio production.</p>
+        <span class="mono-tag">PROGRAMS &amp; DISCIPLINES</span>
+        <h2>What We Teach</h2>
+        <p>Explore private lessons across classical, jazz, contemporary, and modern studio production.</p>
       </div>
 
-      <div class="cards-grid">
-        <!-- 1. Piano -->
-        <article class="card">
-          <div>
-            <span class="card-tag">Keys &bull; All Ages</span>
-            <h3>Piano</h3>
-            <p>[CUSTOMIZE — Technique, sight-reading, chords, improvisation, and classical or contemporary repertoire.]</p>
-          </div>
-          <div class="card-footer">
-            <span>2 Instructors</span>
-            <a href="teachers.html?filter=piano">View Teachers &rarr;</a>
-          </div>
-        </article>
-
-        <!-- 2. Guitar -->
-        <article class="card">
-          <div>
-            <span class="card-tag">Strings &bull; Acoustic &amp; Electric</span>
-            <h3>Guitar</h3>
-            <p>[CUSTOMIZE — Strumming, fingerstyle, scales, rhythm, lead playing, and learning your favorite songs.]</p>
-          </div>
-          <div class="card-footer">
-            <span>2 Instructors</span>
-            <a href="teachers.html?filter=guitar">View Teachers &rarr;</a>
-          </div>
-        </article>
-
-        <!-- 3. Ukulele -->
-        <article class="card">
-          <div>
-            <span class="card-tag">Strings &bull; Beginner-Friendly</span>
-            <h3>Ukulele</h3>
-            <p>[CUSTOMIZE — Fast, approachable chord progressions, strumming patterns, melody playing, and songwriting.]</p>
-          </div>
-          <div class="card-footer">
-            <span>1 Instructor</span>
-            <a href="teachers.html?filter=ukulele">View Teacher &rarr;</a>
-          </div>
-        </article>
-
-        <!-- 4. Violin -->
-        <article class="card">
-          <div>
-            <span class="card-tag">Orchestral Strings</span>
-            <h3>Violin</h3>
-            <p>[CUSTOMIZE — Bow technique, intonation, posture, music reading, and solo or ensemble repertoire.]</p>
-          </div>
-          <div class="card-footer">
-            <span>1 Instructor</span>
-            <a href="teachers.html?filter=violin">View Teacher &rarr;</a>
-          </div>
-        </article>
-
-        <!-- 5. Cello -->
-        <article class="card">
-          <div>
-            <span class="card-tag">Orchestral Strings</span>
-            <h3>Cello</h3>
-            <p>[CUSTOMIZE — Rich tone production, shifting, bowing control, and classical through modern cello pieces.]</p>
-          </div>
-          <div class="card-footer">
-            <span>1 Instructor</span>
-            <a href="teachers.html?filter=cello">View Teacher &rarr;</a>
-          </div>
-        </article>
-
-        <!-- 6. Saxophone -->
-        <article class="card">
-          <div>
-            <span class="card-tag">Woodwinds &bull; Jazz &amp; Classical</span>
-            <h3>Saxophone</h3>
-            <p>[CUSTOMIZE — Embouchure, breath support, tone, jazz improvisation, and school band or solo prep.]</p>
-          </div>
-          <div class="card-footer">
-            <span>2 Instructors</span>
-            <a href="teachers.html?filter=saxophone">View Teachers &rarr;</a>
-          </div>
-        </article>
-
-        <!-- 7. Trumpet -->
-        <article class="card">
-          <div>
-            <span class="card-tag">Brass &bull; Band, Jazz &amp; Solo</span>
-            <h3>Trumpet</h3>
-            <p>[CUSTOMIZE — Range building, articulation, endurance, sight-reading, and jazz or concert performance.]</p>
-          </div>
-          <div class="card-footer">
-            <span>1 Instructor</span>
-            <a href="teachers.html?filter=trumpet">View Teacher &rarr;</a>
-          </div>
-        </article>
-
-        <!-- 8. Audio Production -->
-        <article class="card">
-          <div>
-            <span class="card-tag">Studio &bull; Modern Creation</span>
-            <h3>Audio Production</h3>
-            <p>[CUSTOMIZE — Beatmaking, DAW workflow, recording, mixing, sound design, and finishing original tracks.]</p>
-          </div>
-          <div class="card-footer">
-            <span>1 Instructor</span>
-            <a href="teachers.html?filter=production">View Teacher &rarr;</a>
-          </div>
-        </article>
+      <div class="instrument-grid">
+        <div class="instrument-card">
+          <span class="mono-label">KEYS</span>
+          <h3>Piano</h3>
+          <p>Technique, sight-reading, ear training, and repertoire from classical foundations to modern styles.</p>
+        </div>
+        <div class="instrument-card">
+          <span class="mono-label">FRETTED STRINGS</span>
+          <h3>Guitar &amp; Ukulele</h3>
+          <p>Acoustic, electric, fingerstyle, chord theory, and songwriting tailored to your musical taste.</p>
+        </div>
+        <div class="instrument-card">
+          <span class="mono-label">WOODWINDS &amp; BRASS</span>
+          <h3>Saxophone &amp; Trumpet</h3>
+          <p>Tone development, breath control, jazz improvisation, and school band or ensemble prep.</p>
+        </div>
+        <div class="instrument-card">
+          <span class="mono-label">ORCHESTRAL STRINGS</span>
+          <h3>Violin &amp; Cello</h3>
+          <p>Intonation, bowing mechanics, chamber music, and audition preparation for young and adult players.</p>
+        </div>
+        <div class="instrument-card">
+          <span class="mono-label">STUDIO</span>
+          <h3>Audio Production</h3>
+          <p>Beatmaking, DAW workflows, mixing fundamentals, and turning musical ideas into finished tracks.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 4. TEACHING APPROACH -->
-  <section id="approach" class="pillars-section">
+  <!-- ABOUT SECTION -->
+  <section id="about" class="section-padding">
+    <div class="container about-grid">
+      <div>
+        <span class="mono-tag">OUR APPROACH</span>
+        <h2>Personal Mentorship, Not Cookie-Cutter Drills.</h2>
+        <p style="margin-bottom: 18px;">
+          At Parrella Music School, every student learns differently. We pair strong musical fundamentals with the songs, styles, and creative goals that actually keep you excited to practice.
+        </p>
+        <p style="margin-bottom: 28px;">
+          Our faculty consists of working performers, composers, and educators in the Palo Alto area who bring real-world musicianship into every weekly session.
+        </p>
+        <a href="teachers.html" class="btn btn-secondary">Explore Our 9 Teachers</a>
+      </div>
+
+      <div class="about-pillars">
+        <div class="pillar-box">
+          <h3>Tailored Curriculum</h3>
+          <p>Custom lesson plans adapted to each student's pace, experience level, and musical interests.</p>
+        </div>
+        <div class="pillar-box">
+          <h3>Flexible Scheduling</h3>
+          <p>Morning, afternoon, and evening lesson times available both in-person in Palo Alto and online.</p>
+        </div>
+        <div class="pillar-box">
+          <h3>Performance &amp; Creation</h3>
+          <p>Build confidence through recitals, ensemble skills, and hands-on recording projects.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RATES SECTION -->
+  <section id="rates" class="section-padding rates-section">
     <div class="container">
       <div class="section-header">
-        <span class="eyebrow">Why Parrela Music School</span>
-        <h2>Built Around Consistency &amp; Joy</h2>
-        <p>[SUBTITLE — A short sentence about how your school helps students progress while enjoying music.]</p>
-      </div>
-
-      <div class="pillars-grid">
-        <div class="pillar">
-          <span class="pillar-num">01 / CUSTOM CURRICULUM</span>
-          <h3>[Pillar 1 Title — e.g. Music You Actually Love]</h3>
-          <p>[Explain how lessons balance strong technical fundamentals with songs, genres, and projects each student cares about.]</p>
-        </div>
-
-        <div class="pillar">
-          <span class="pillar-num">02 / SPECIALIST FACULTY</span>
-          <h3>[Pillar 2 Title — e.g. Learn From Active Musicians]</h3>
-          <p>[Explain how every student is matched with an instructor who specializes in their exact instrument and learning style.]</p>
-        </div>
-
-        <div class="pillar">
-          <span class="pillar-num">03 / FLEXIBLE LEARNING</span>
-          <h3>[Pillar 3 Title — e.g. Supportive Environment]</h3>
-          <p>[Explain your studio atmosphere, scheduling options, or ability to take lessons in-person or online.]</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. MEET THE TEACHERS PREVIEW -->
-  <section id="faculty">
-    <div class="container">
-      <div class="faculty-banner">
-        <div>
-          <span class="eyebrow">Our Faculty</span>
-          <h2>Learn With Dedicated Specialists</h2>
-          <p>
-            Our teaching team brings together experienced performers, educators, and producers across 8 instruments and disciplines. Browse full bios, specialties, and teaching backgrounds on our dedicated faculty page.
-          </p>
-          <a href="teachers.html" class="btn btn-light">Meet All 8 Teachers &rarr;</a>
-        </div>
-
-        <div class="faculty-roster-preview">
-          <h4>Current Faculty Roster</h4>
-          <ul class="roster-list">
-            <li><span>Daniel Parrela</span><span>Piano</span></li>
-            <li><span>Lily Chen</span><span>Piano</span></li>
-            <li><span>Sarah Coelho</span><span>Guitar, Ukulele</span></li>
-            <li><span>Santiago Martin</span><span>Guitar</span></li>
-            <li><span>Kash Bhat</span><span>Saxophone, Production</span></li>
-            <li><span>Owen [Last Name]</span><span>Saxophone</span></li>
-            <li><span>Ben Brubaker</span><span>Trumpet</span></li>
-            <li><span>Sam Amnisnov</span><span>Cello</span></li>
-            <li><span>Brandon [Last Name]</span><span>Violin</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 6. LESSON FORMATS & RATES -->
-  <section id="rates">
-    <div class="container">
-      <div class="section-header">
-        <span class="eyebrow">Tuition &amp; Scheduling</span>
-        <h2>Simple, Transparent Lesson Options</h2>
-        <p>[NOTE — Replace $[XX] with your actual lesson rates, or let me know if you prefer "Contact for Pricing".]</p>
+        <span class="mono-tag">TUITION &amp; PACKAGES</span>
+        <h2>Simple, Transparent Lesson Rates</h2>
+        <p>Weekly private one-on-one lessons with no long-term lock-in contracts.</p>
       </div>
 
       <div class="rates-grid">
         <div class="rate-card">
-          <span class="card-tag">Great for Beginners &amp; Young Kids</span>
-          <h3>30-Minute Weekly</h3>
-          <div class="price">$[XX] <span>/ lesson</span></div>
-          <ul class="rate-list">
-            <li>1-on-1 private instruction</li>
-            <li>Personalized weekly practice plan</li>
-            <li>Ideal for young beginners or busy schedules</li>
-          </ul>
-          <a href="#contact" class="btn btn-outline" style="width: 100%;">Request Slot</a>
+          <div>
+            <span class="mono-label">STARTER</span>
+            <h3>30-Minute Lesson</h3>
+            <div class="rate-price">$[XX] <span>/ session</span></div>
+            <p>Ideal for younger beginners building focus and foundational habits.</p>
+            <ul class="rate-features">
+              <li>Weekly 1-on-1 private instruction</li>
+              <li>Custom practice notes after class</li>
+              <li>In-studio or online flexibility</li>
+            </ul>
+          </div>
+          <a href="#contact" class="btn btn-secondary" style="width: 100%;">Inquire Now</a>
         </div>
 
         <div class="rate-card featured">
-          <span class="rate-badge">Most Popular</span>
-          <span class="card-tag">Balanced Depth &amp; Repertoire</span>
-          <h3>45-Minute Weekly</h3>
-          <div class="price">$[XX] <span>/ lesson</span></div>
-          <ul class="rate-list">
-            <li>1-on-1 private instruction</li>
-            <li>Technique, theory &amp; full songs</li>
-            <li>Recommended for teens &amp; adults</li>
-          </ul>
-          <a href="#contact" class="btn btn-primary" style="width: 100%;">Book Trial Lesson</a>
+          <div>
+            <span class="mono-label">MOST POPULAR</span>
+            <h3>45-Minute Lesson</h3>
+            <div class="rate-price">$[XX] <span>/ session</span></div>
+            <p>Balanced depth for developing technique, repertoire, and theory.</p>
+            <ul class="rate-features">
+              <li>Weekly 1-on-1 private instruction</li>
+              <li>Technique, repertoire &amp; ear training</li>
+              <li>Recital &amp; audition preparation</li>
+            </ul>
+          </div>
+          <a href="#contact" class="btn btn-primary" style="width: 100%;">Book 45-Min Intro</a>
         </div>
 
         <div class="rate-card">
-          <span class="card-tag">Accelerated &amp; Production</span>
-          <h3>60-Minute Weekly</h3>
-          <div class="price">$[XX] <span>/ lesson</span></div>
-          <ul class="rate-list">
-            <li>Deep dive into repertoire or DAW projects</li>
-            <li>Audition, jazz, or recital prep</li>
-            <li>Great for advanced players &amp; producers</li>
-          </ul>
-          <a href="#contact" class="btn btn-outline" style="width: 100%;">Request Slot</a>
+          <div>
+            <span class="mono-label">INTENSIVE</span>
+            <h3>60-Minute Lesson</h3>
+            <div class="rate-price">$[XX] <span>/ session</span></div>
+            <p>Best for dedicated teens, adults, multi-instrumentalists, and production.</p>
+            <ul class="rate-features">
+              <li>Full hour of deep-dive mentorship</li>
+              <li>Advanced repertoire or DAW projects</li>
+              <li>Flexible scheduling options</li>
+            </ul>
+          </div>
+          <a href="#contact" class="btn btn-secondary" style="width: 100%;">Inquire Now</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 7. CONTACT & TRIAL BOOKING -->
-  <section id="contact" class="contact-section">
-    <div class="container contact-grid">
-      <div>
-        <span class="eyebrow">Get Started</span>
-        <h2>Book Your Trial Lesson</h2>
-        <p class="mono" style="font-size: 0.92rem; color: var(--text-muted); margin-top: 0.85rem;">
-          [CONTACT INTRO — Tell us which instrument or teacher you're interested in, and we'll help match you with the right schedule.]
-        </p>
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="section-padding">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <span class="mono-tag">START YOUR JOURNEY</span>
+          <h2>Book an Intro Lesson</h2>
+          <p>Ready to get started or have questions about finding the right teacher? Fill out the form or reach out directly.</p>
+          
+          <div class="info-list">
+            <div class="info-item">
+              <span class="mono-label">LOCATION</span>
+              <p>Palo Alto, CA (In-Studio &amp; Online Lessons)</p>
+            </div>
+            <div class="info-item">
+              <span class="mono-label">TEACHING HOURS</span>
+              <p>Flexible Scheduling — Morning, Afternoon &amp; Evening Slots Available</p>
+            </div>
+            <div class="info-item">
+              <span class="mono-label">PHONE</span>
+              <p><a href="tel:6504444219" style="color: inherit; text-decoration: underline;">(650) 444-4219</a></p>
+            </div>
+            <div class="info-item">
+              <span class="mono-label">EMAIL</span>
+              <p><a href="mailto:parrelamusicschool@gmail.com" style="color: inherit; text-decoration: underline;">parrelamusicschool@gmail.com</a></p>
+            </div>
+          </div>
+        </div>
 
-        <ul class="contact-details">
-          <li>
-            <strong>Studio Location</strong>
-            <span>[YOUR CITY / ADDRESS — e.g. Studio Location or Online]</span>
-          </li>
-          <li>
-            <strong>Teaching Hours</strong>
-            <span>[YOUR HOURS — e.g. Mon–Fri: 2:00 PM – 8:00 PM | Sat: 9:00 AM – 3:00 PM]</span>
-          </li>
-          <li>
-            <strong>Email &amp; Phone</strong>
-            <span>[YOUR EMAIL &amp; PHONE — e.g. hello@parrelamusicschool.com]</span>
-          </li>
-        </ul>
+        <div class="contact-form-card">
+          <form id="lessonForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="7cea56fa-3fa7-49e9-aa32-db47715a5310">
+            <input type="hidden" name="subject" value="New Lesson Inquiry - Parrella Music School">
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+            <div class="form-group">
+              <label for="name">Student / Parent Name *</label>
+              <input type="text" id="name" name="name" required placeholder="Jane Doe">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required placeholder="jane@example.com">
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="(650) 555-0199">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="instrument">Instrument *</label>
+                <select id="instrument" name="instrument" required>
+                  <option value="">Select Instrument...</option>
+                  <option value="Piano">Piano</option>
+                  <option value="Guitar">Guitar</option>
+                  <option value="Ukulele">Ukulele</option>
+                  <option value="Saxophone">Saxophone</option>
+                  <option value="Trumpet">Trumpet</option>
+                  <option value="Violin">Violin</option>
+                  <option value="Cello">Cello</option>
+                  <option value="Audio Production">Audio Production</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="teacher">Preferred Teacher</label>
+                <select id="teacher" name="teacher">
+                  <option value="Match me! (Best Fit)">Match me! (Best Fit)</option>
+                  <option value="Daniel Parrela">Daniel Parrela (Piano)</option>
+                  <option value="Lily Chen">Lily Chen (Piano)</option>
+                  <option value="Sarah Coelho">Sarah Coelho (Guitar / Uke)</option>
+                  <option value="Santiago Martin">Santiago Martin (Guitar)</option>
+                  <option value="Kash Bhat">Kash Bhat (Sax / Production)</option>
+                  <option value="Owen">Owen (Saxophone)</option>
+                  <option value="Ben Brubaker">Ben Brubaker (Trumpet)</option>
+                  <option value="Sam Amnisnov">Sam Amnisnov (Cello)</option>
+                  <option value="Brandon">Brandon (Violin)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Experience Level &amp; Goals</label>
+              <textarea id="message" name="message" rows="3" placeholder="Beginner or experienced? Preferred days/times?"></textarea>
+            </div>
+
+            <button type="submit" id="submitBtn" class="btn btn-primary" style="width: 100%;">Request Intro Lesson</button>
+            <p id="formResult" style="margin-top: 12px; font-size: 0.9rem; text-align: center;"></p>
+          </form>
+        </div>
       </div>
-
-      <form class="booking-form" onsubmit="event.preventDefault(); alert('Form submitted! We will connect this to your email whenever you are ready.');">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">Student / Parent Name</label>
-            <input type="text" id="name" name="name" placeholder="Your full name" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="you@example.com" required />
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="instrument">Instrument / Program</label>
-            <select id="instrument" name="instrument">
-              <option value="piano">Piano</option>
-              <option value="guitar">Guitar</option>
-              <option value="ukulele">Ukulele</option>
-              <option value="violin">Violin</option>
-              <option value="cello">Cello</option>
-              <option value="saxophone">Saxophone</option>
-              <option value="trumpet">Trumpet</option>
-              <option value="production">Audio Production</option>
-              <option value="not-sure">Not Sure Yet</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="teacher">Preferred Teacher (Optional)</label>
-            <select id="teacher" name="teacher">
-              <option value="any">Match Me With Best Fit</option>
-              <option value="Daniel Parrela">Daniel Parrela (Piano)</option>
-              <option value="Lily Chen">Lily Chen (Piano)</option>
-              <option value="Sarah Coelho">Sarah Coelho (Guitar / Ukulele)</option>
-              <option value="Santiago Martin">Santiago Martin (Guitar)</option>
-              <option value="Kash Bhat">Kash Bhat (Saxophone / Audio Production)</option>
-              <option value="Owen">Owen [Last Name] (Saxophone)</option>
-              <option value="Ben Brubaker">Ben Brubaker (Trumpet)</option>
-              <option value="Sam Amnisnov">Sam Amnisnov (Cello)</option>
-              <option value="Brandon">Brandon [Last Name] (Violin)</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="message">Goals, Experience &amp; Preferred Days</label>
-          <textarea id="message" name="message" rows="4" placeholder="Tell us student age, experience level, and days/times that work best..."></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Inquiry</button>
-      </form>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer>
     <div class="container footer-inner">
-      <div>&copy; <span id="year"></span> Parrela Music School. All rights reserved.</div>
-      <div>[CITY, STATE] &bull; [EMAIL ADDRESS]</div>
+      <div>
+        <strong style="color: #FFFFFF;">Parrella Music School</strong> • Palo Alto, CA
+      </div>
+      <div class="footer-links">
+        <a href="#instruments">Instruments</a>
+        <a href="#about">About</a>
+        <a href="#rates">Rates</a>
+        <a href="teachers.html">Teachers</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    const lessonForm = document.getElementById('lessonForm');
+    const formResult = document.getElementById('formResult');
+    const submitBtn = document.getElementById('submitBtn');
+
+    lessonForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      formResult.textContent = '';
+
+      const formData = new FormData(lessonForm);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: json
+        });
+        const result = await response.json();
+        if (response.status === 200) {
+          formResult.style.color = '#005B5C';
+          formResult.textContent = 'Inquiry sent! We will reach out shortly to schedule your lesson.';
+          lessonForm.reset();
+        } else {
+          formResult.style.color = '#D95D39';
+          formResult.textContent = result.message || 'Something went wrong. Please email or call us directly.';
+        }
+      } catch (error) {
+        formResult.style.color = '#D95D39';
+        formResult.textContent = 'Network error. Please email parrelamusicschool@gmail.com directly.';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Request Intro Lesson';
+      }
+    });
   </script>
+
 </body>
-</html>
+</html><!--  -->
