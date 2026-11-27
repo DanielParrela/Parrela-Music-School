@@ -357,20 +357,39 @@
     }
 
     .instrument-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-decoration: none;
       background-color: var(--cream);
       border: 1px solid var(--border-subtle);
       border-radius: var(--radius);
       padding: 26px;
-      transition: transform 0.2s ease, border-color 0.2s ease;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
     }
 
     .instrument-card:hover {
       transform: translateY(-3px);
       border-color: var(--teal);
+      box-shadow: 0 10px 24px rgba(0, 91, 92, 0.08);
     }
 
     .instrument-card .mono-label {
       font-size: 0.72rem;
+    }
+
+    .card-link-cue {
+      display: inline-block;
+      margin-top: 16px;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--terracotta);
+      transition: transform 0.2s ease;
+    }
+
+    .instrument-card:hover .card-link-cue {
+      transform: translateX(3px);
     }
 
     /* ABOUT */
@@ -701,31 +720,50 @@
       </div>
 
       <div class="instrument-grid">
-        <div class="instrument-card">
-          <span class="mono-label">KEYS</span>
-          <h3>Piano</h3>
-          <p>Technique, sight-reading, ear training, and repertoire taught right on your own home piano or keyboard.</p>
-        </div>
-        <div class="instrument-card">
-          <span class="mono-label">FRETTED STRINGS</span>
-          <h3>Guitar &amp; Ukulele</h3>
-          <p>Acoustic, electric, fingerstyle, chord theory, and songwriting tailored to your musical taste at home.</p>
-        </div>
-        <div class="instrument-card">
-          <span class="mono-label">WOODWINDS &amp; BRASS</span>
-          <h3>Saxophone &amp; Trumpet</h3>
-          <p>Tone development, breath control, jazz improvisation, and school band or ensemble prep.</p>
-        </div>
-        <div class="instrument-card">
-          <span class="mono-label">ORCHESTRAL STRINGS</span>
-          <h3>Violin &amp; Cello</h3>
-          <p>Intonation, bowing mechanics, chamber music, and audition preparation with hands-on guidance.</p>
-        </div>
-        <div class="instrument-card">
-          <span class="mono-label">AT-HOME STUDIO</span>
-          <h3>Audio Production</h3>
-          <p>Beatmaking, DAW workflows, mixing fundamentals, and turning musical ideas into finished tracks on your setup.</p>
-        </div>
+        <a href="teachers.html?filter=piano" class="instrument-card">
+          <div>
+            <span class="mono-label">KEYS</span>
+            <h3>Piano</h3>
+            <p>Technique, sight-reading, ear training, and repertoire taught right on your own home piano or keyboard.</p>
+          </div>
+          <span class="card-link-cue">View Piano Teachers &rarr;</span>
+        </a>
+
+        <a href="teachers.html?filter=guitar" class="instrument-card">
+          <div>
+            <span class="mono-label">FRETTED STRINGS</span>
+            <h3>Guitar &amp; Ukulele</h3>
+            <p>Acoustic, electric, fingerstyle, chord theory, and songwriting tailored to your musical taste at home.</p>
+          </div>
+          <span class="card-link-cue">View Guitar &amp; Uke Teachers &rarr;</span>
+        </a>
+
+        <a href="teachers.html?filter=saxophone" class="instrument-card">
+          <div>
+            <span class="mono-label">WOODWINDS &amp; BRASS</span>
+            <h3>Saxophone &amp; Trumpet</h3>
+            <p>Tone development, breath control, jazz improvisation, and school band or ensemble prep.</p>
+          </div>
+          <span class="card-link-cue">View Winds &amp; Brass Teachers &rarr;</span>
+        </a>
+
+        <a href="teachers.html?filter=violin" class="instrument-card">
+          <div>
+            <span class="mono-label">ORCHESTRAL STRINGS</span>
+            <h3>Violin &amp; Cello</h3>
+            <p>Intonation, bowing mechanics, chamber music, and audition preparation with hands-on guidance.</p>
+          </div>
+          <span class="card-link-cue">View String Teachers &rarr;</span>
+        </a>
+
+        <a href="teachers.html?filter=production" class="instrument-card">
+          <div>
+            <span class="mono-label">AT-HOME STUDIO</span>
+            <h3>Audio Production</h3>
+            <p>Beatmaking, DAW workflows, mixing fundamentals, and turning musical ideas into finished tracks on your setup.</p>
+          </div>
+          <span class="card-link-cue">View Production Teacher &rarr;</span>
+        </a>
       </div>
     </div>
   </section>
@@ -787,7 +825,7 @@
               <li>Instructor travels directly to you</li>
             </ul>
           </div>
-          <a href="#contact" class="btn btn-secondary" style="width: 100%;">Inquire Now</a>
+          <a href="#contact" class="btn btn-secondary rate-select-btn" data-plan="30-Minute Lesson (Starting at $30/session)" style="width: 100%;">Inquire Now</a>
         </div>
 
         <div class="rate-card featured">
@@ -805,7 +843,7 @@
               <li>Recital &amp; audition preparation</li>
             </ul>
           </div>
-          <a href="#contact" class="btn btn-primary" style="width: 100%;">Book 45-Min Intro</a>
+          <a href="#contact" class="btn btn-primary rate-select-btn" data-plan="45-Minute Lesson (Starting at $37.50/session)" style="width: 100%;">Book 45-Min Intro</a>
         </div>
 
         <div class="rate-card">
@@ -823,7 +861,7 @@
               <li>Convenient weekly home visits</li>
             </ul>
           </div>
-          <a href="#contact" class="btn btn-secondary" style="width: 100%;">Inquire Now</a>
+          <a href="#contact" class="btn btn-secondary rate-select-btn" data-plan="60-Minute Lesson (Starting at $45/session)" style="width: 100%;">Inquire Now</a>
         </div>
       </div>
 
@@ -869,7 +907,7 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Student / Parent Name *</label>
-                <input type="text" id="name" name="name" required placeholder="Jane Doe">
+                <input type="text" id="name" name="name" required placeholder="Alex Rivera">
               </div>
               <div class="form-group">
                 <label for="neighborhood">Neighborhood / City *</label>
@@ -880,7 +918,7 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" required placeholder="jane@example.com">
+                <input type="email" id="email" name="email" required placeholder="alex@example.com">
               </div>
               <div class="form-group">
                 <label for="phone">Phone Number</label>
@@ -907,7 +945,7 @@
               <div class="form-group">
                 <label for="teacher">Preferred Teacher</label>
                 <select id="teacher" name="teacher">
-                  <option value="No Preference">No Preference</option>
+                  <option value="Match Me (Best Fit)">Match Me (Best Fit)</option>
                   <option value="Daniel Parrela">Daniel Parrela (Piano)</option>
                   <option value="Lily Chen">Lily Chen (Piano)</option>
                   <option value="Sarah Coelho">Sarah Coelho (Guitar / Uke)</option>
@@ -967,6 +1005,17 @@
         mobileDrawer.classList.remove('open');
         menuToggle.classList.remove('open');
         menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Pre-fill Message Box When Selecting a Rate Card
+    const messageField = document.getElementById('message');
+    document.querySelectorAll('.rate-select-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const plan = btn.dataset.plan;
+        if (plan) {
+          messageField.value = `Interested in: ${plan}\n`;
+        }
       });
     });
 
