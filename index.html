@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Parrela Music School | Palo Alto Music Lessons</title>
+  <title>Parrela Music School | Palo Alto In-Home Music Lessons</title>
+  <link rel="icon" type="image/png" href="LogoTransparentBackground.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
@@ -119,7 +120,7 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       text-decoration: none;
       color: var(--teal);
       font-weight: 800;
@@ -127,12 +128,11 @@
       letter-spacing: -0.02em;
     }
 
-    .brand-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background-color: var(--terracotta);
-      display: inline-block;
+    .brand img {
+      height: 38px;
+      width: 38px;
+      object-fit: contain;
+      display: block;
     }
 
     .nav-links {
@@ -484,6 +484,18 @@
       gap: 16px;
     }
 
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-brand img {
+      height: 30px;
+      width: 30px;
+      object-fit: contain;
+    }
+
     .footer-links {
       display: flex;
       gap: 22px;
@@ -521,8 +533,8 @@
   <header>
     <div class="container nav-inner">
       <a href="index.html" class="brand">
-        <span class="brand-dot"></span>
-        Parrela Music School
+        <img src="LogoTransparentBackground.png" alt="Parrela Music School Logo" />
+        <span>Parrela Music School</span>
       </a>
       <ul class="nav-links">
         <li><a href="#instruments">Instruments</a></li>
@@ -538,27 +550,27 @@
   <section class="hero">
     <div class="container hero-grid">
       <div>
-        <span class="mono-tag">PALO ALTO • IN-STUDIO &amp; ONLINE</span>
-        <h1>Private Music Lessons Built Around How You Learn.</h1>
+        <span class="mono-tag">PALO ALTO • 100% IN-HOME LESSONS</span>
+        <h1>Private Music Lessons Taught in Your Home.</h1>
         <p class="lead">
-          One-on-one instruction in piano, guitar, strings, woodwinds, brass, and audio production with dedicated Palo Alto musicians.
+          Skip the after-school commute. One-on-one in-home instruction in piano, guitar, strings, woodwinds, brass, and audio production with dedicated Palo Alto musicians who travel directly to your door.
         </p>
         <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">Book an Intro Lesson</a>
+          <a href="#contact" class="btn btn-primary">Book an In-Home Intro</a>
           <a href="teachers.html" class="btn btn-secondary">Meet the Teachers</a>
         </div>
       </div>
 
       <div class="hero-card">
-        <span class="mono-tag">NOW ENROLLING</span>
+        <span class="mono-tag">NOW ENROLLING IN PALO ALTO</span>
         <h3>All Ages &amp; Skill Levels</h3>
         <p>
-          Whether you are picking up an instrument for the very first time or preparing for auditions and recording sessions, we match you with the right instructor.
+          Whether you are picking up an instrument for the very first time or preparing for auditions and recording sessions, our instructors come straight to your living room.
         </p>
         <div class="hero-stats">
           <div>
             <span class="stat-num">9</span>
-            <span class="stat-desc">Active Faculty</span>
+            <span class="stat-desc">Traveling Faculty</span>
           </div>
           <div>
             <span class="stat-num">8</span>
@@ -573,21 +585,21 @@
   <section id="instruments" class="section-padding instruments-section">
     <div class="container">
       <div class="section-header">
-        <span class="mono-tag">PROGRAMS &amp; DISCIPLINES</span>
+        <span class="mono-tag">IN-HOME PROGRAMS &amp; DISCIPLINES</span>
         <h2>What We Teach</h2>
-        <p>Explore private lessons across classical, jazz, contemporary, and modern studio production.</p>
+        <p>Explore private in-home lessons across classical, jazz, contemporary, and modern studio production.</p>
       </div>
 
       <div class="instrument-grid">
         <div class="instrument-card">
           <span class="mono-label">KEYS</span>
           <h3>Piano</h3>
-          <p>Technique, sight-reading, ear training, and repertoire from classical foundations to modern styles.</p>
+          <p>Technique, sight-reading, ear training, and repertoire taught right on your own home piano or keyboard.</p>
         </div>
         <div class="instrument-card">
           <span class="mono-label">FRETTED STRINGS</span>
           <h3>Guitar &amp; Ukulele</h3>
-          <p>Acoustic, electric, fingerstyle, chord theory, and songwriting tailored to your musical taste.</p>
+          <p>Acoustic, electric, fingerstyle, chord theory, and songwriting tailored to your musical taste at home.</p>
         </div>
         <div class="instrument-card">
           <span class="mono-label">WOODWINDS &amp; BRASS</span>
@@ -597,12 +609,12 @@
         <div class="instrument-card">
           <span class="mono-label">ORCHESTRAL STRINGS</span>
           <h3>Violin &amp; Cello</h3>
-          <p>Intonation, bowing mechanics, chamber music, and audition preparation for young and adult players.</p>
+          <p>Intonation, bowing mechanics, chamber music, and audition preparation with hands-on guidance.</p>
         </div>
         <div class="instrument-card">
-          <span class="mono-label">STUDIO</span>
+          <span class="mono-label">AT-HOME STUDIO</span>
           <h3>Audio Production</h3>
-          <p>Beatmaking, DAW workflows, mixing fundamentals, and turning musical ideas into finished tracks.</p>
+          <p>Beatmaking, DAW workflows, mixing fundamentals, and turning musical ideas into finished tracks on your setup.</p>
         </div>
       </div>
     </div>
@@ -612,13 +624,13 @@
   <section id="about" class="section-padding">
     <div class="container about-grid">
       <div>
-        <span class="mono-tag">OUR APPROACH</span>
-        <h2>Personal Mentorship, Not Cookie-Cutter Drills.</h2>
+        <span class="mono-tag">OUR IN-HOME APPROACH</span>
+        <h2>Personal Mentorship, Right at Your Doorstep.</h2>
         <p style="margin-bottom: 18px;">
-          At Parrela Music School, every student learns differently. We pair strong musical fundamentals with the songs, styles, and creative goals that actually keep you excited to practice.
+          At Parrela Music School, every lesson happens face-to-face in the comfort of your own home. Students learn on the exact instrument they practice on every day, while parents save hours of weekly driving across Palo Alto.
         </p>
         <p style="margin-bottom: 28px;">
-          Our faculty consists of working performers, composers, and educators in the Palo Alto area who bring real-world musicianship into every weekly session.
+          Our faculty consists of working performers, composers, and educators in the Palo Alto area who bring real-world musicianship directly into your home every week.
         </p>
         <a href="teachers.html" class="btn btn-secondary">Explore Our 9 Teachers</a>
       </div>
@@ -629,8 +641,8 @@
           <p>Custom lesson plans adapted to each student's pace, experience level, and musical interests.</p>
         </div>
         <div class="pillar-box">
-          <h3>Flexible Scheduling</h3>
-          <p>Morning, afternoon, and evening lesson times available both in-person in Palo Alto and online.</p>
+          <h3>Zero Commute Stress</h3>
+          <p>Morning, afternoon, and evening in-home lesson times across Palo Alto and neighboring communities.</p>
         </div>
         <div class="pillar-box">
           <h3>Performance &amp; Creation</h3>
@@ -644,9 +656,9 @@
   <section id="rates" class="section-padding rates-section">
     <div class="container">
       <div class="section-header">
-        <span class="mono-tag">TUITION &amp; PACKAGES</span>
+        <span class="mono-tag">IN-HOME TUITION &amp; PACKAGES</span>
         <h2>Simple, Transparent Lesson Rates</h2>
-        <p>Weekly private one-on-one lessons with no long-term lock-in contracts.</p>
+        <p>Weekly private in-home one-on-one lessons with no long-term lock-in contracts.</p>
       </div>
 
       <div class="rates-grid">
@@ -658,11 +670,11 @@
               <span class="starting-label">Starting at</span>
               $30.00 <span class="unit">/ session</span>
             </div>
-            <p>Ideal for younger beginners building focus and foundational habits.</p>
+            <p>Ideal for younger beginners building focus and foundational habits at home.</p>
             <ul class="rate-features">
-              <li>Weekly 1-on-1 private instruction</li>
+              <li>Weekly 1-on-1 in-home instruction</li>
               <li>Custom practice notes after class</li>
-              <li>In-studio or online flexibility</li>
+              <li>Instructor travels directly to you</li>
             </ul>
           </div>
           <a href="#contact" class="btn btn-secondary" style="width: 100%;">Inquire Now</a>
@@ -678,7 +690,7 @@
             </div>
             <p>Balanced depth for developing technique, repertoire, and theory.</p>
             <ul class="rate-features">
-              <li>Weekly 1-on-1 private instruction</li>
+              <li>Weekly 1-on-1 in-home instruction</li>
               <li>Technique, repertoire &amp; ear training</li>
               <li>Recital &amp; audition preparation</li>
             </ul>
@@ -696,16 +708,16 @@
             </div>
             <p>Best for dedicated teens, adults, multi-instrumentalists, and production.</p>
             <ul class="rate-features">
-              <li>Full hour of deep-dive mentorship</li>
+              <li>Full hour of deep-dive home mentorship</li>
               <li>Advanced repertoire or DAW projects</li>
-              <li>Flexible scheduling options</li>
+              <li>Convenient weekly home visits</li>
             </ul>
           </div>
           <a href="#contact" class="btn btn-secondary" style="width: 100%;">Inquire Now</a>
         </div>
       </div>
 
-      <p class="rates-note">* Rates vary slightly depending on instrument and instructor.</p>
+      <p class="rates-note">* Rates vary slightly depending on instrument, instructor, and travel distance.</p>
     </div>
   </section>
 
@@ -715,17 +727,17 @@
       <div class="contact-grid">
         <div class="contact-info">
           <span class="mono-tag">START YOUR JOURNEY</span>
-          <h2>Book an Intro Lesson</h2>
-          <p>Ready to get started or have questions about finding the right teacher? Fill out the form or reach out directly.</p>
+          <h2>Book an In-Home Intro Lesson</h2>
+          <p>Ready to get started or have questions about finding the right traveling teacher? Fill out the form or reach out directly.</p>
           
           <div class="info-list">
             <div class="info-item">
-              <span class="mono-label">LOCATION</span>
-              <p>Palo Alto, CA (In-Studio &amp; Online Lessons)</p>
+              <span class="mono-label">SERVICE AREA</span>
+              <p>Palo Alto, CA &amp; Surrounding Peninsula (100% In-Home Lessons)</p>
             </div>
             <div class="info-item">
               <span class="mono-label">TEACHING HOURS</span>
-              <p>Flexible Scheduling — Morning, Afternoon &amp; Evening Slots Available</p>
+              <p>Flexible In-Home Scheduling — Morning, Afternoon &amp; Evening Slots Available</p>
             </div>
             <div class="info-item">
               <span class="mono-label">PHONE</span>
@@ -741,12 +753,18 @@
         <div class="contact-form-card">
           <form id="lessonForm" action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="7cea56fa-3fa7-49e9-aa32-db47715a5310">
-            <input type="hidden" name="subject" value="New Lesson Inquiry - Parrela Music School">
+            <input type="hidden" name="subject" value="New In-Home Lesson Inquiry - Parrela Music School">
             <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-            <div class="form-group">
-              <label for="name">Student / Parent Name *</label>
-              <input type="text" id="name" name="name" required placeholder="Jane Doe">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Student / Parent Name *</label>
+                <input type="text" id="name" name="name" required placeholder="Jane Doe">
+              </div>
+              <div class="form-group">
+                <label for="neighborhood">Neighborhood / City *</label>
+                <input type="text" id="neighborhood" name="neighborhood" required placeholder="e.g., Midtown Palo Alto">
+              </div>
             </div>
 
             <div class="form-row">
@@ -795,10 +813,10 @@
 
             <div class="form-group">
               <label for="message">Experience Level &amp; Goals</label>
-              <textarea id="message" name="message" rows="3" placeholder="Beginner or experienced? Preferred days/times?"></textarea>
+              <textarea id="message" name="message" rows="3" placeholder="Beginner or experienced? Preferred days/times for in-home visits?"></textarea>
             </div>
 
-            <button type="submit" id="submitBtn" class="btn btn-primary" style="width: 100%;">Request Intro Lesson</button>
+            <button type="submit" id="submitBtn" class="btn btn-primary" style="width: 100%;">Request In-Home Intro Lesson</button>
             <p id="formResult" style="margin-top: 12px; font-size: 0.9rem; text-align: center;"></p>
           </form>
         </div>
@@ -809,8 +827,9 @@
   <!-- FOOTER -->
   <footer>
     <div class="container footer-inner">
-      <div>
-        <strong style="color: #FFFFFF;">Parrela Music School</strong> • Palo Alto, CA
+      <div class="footer-brand">
+        <img src="LogoTransparentBackground.png" alt="Parrela Music School Logo" />
+        <span><strong style="color: #FFFFFF;">Parrela Music School</strong> • Palo Alto, CA (In-Home Lessons)</span>
       </div>
       <div class="footer-links">
         <a href="#instruments">Instruments</a>
@@ -849,7 +868,7 @@
         const result = await response.json();
         if (response.status === 200) {
           formResult.style.color = '#005B5C';
-          formResult.textContent = 'Inquiry sent! We will reach out shortly to schedule your lesson.';
+          formResult.textContent = 'Inquiry sent! We will reach out shortly to schedule your in-home lesson.';
           lessonForm.reset();
         } else {
           formResult.style.color = '#D95D39';
@@ -860,7 +879,7 @@
         formResult.textContent = 'Network error. Please email parrelamusicschool@gmail.com directly.';
       } finally {
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Request Intro Lesson';
+        submitBtn.textContent = 'Request In-Home Intro Lesson';
       }
     });
   </script>

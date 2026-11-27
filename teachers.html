@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meet the Teachers — Parrela Music School</title>
+  <title>Meet the Teachers — Parrela Music School | Palo Alto In-Home Lessons</title>
+  <link rel="icon" type="image/png" href="LogoTransparentBackground.png" />
 
   <!-- Google Fonts: Outfit (Headings) & Space Mono (Monospace Details) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -148,18 +149,11 @@
       color: var(--primary-teal);
     }
 
-    .logo-mark {
-      width: 38px;
-      height: 38px;
-      border-radius: 8px;
-      background-color: var(--primary-teal);
-      color: var(--bg-cream);
-      display: grid;
-      place-items: center;
-      font-family: var(--font-heading);
-      font-weight: 800;
-      font-size: 1.25rem;
-      border-bottom: 3px solid var(--accent-terracotta);
+    .logo img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+      display: block;
     }
 
     .logo-text {
@@ -390,6 +384,18 @@
       gap: 1rem;
     }
 
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .footer-brand img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+    }
+
     @media (max-width: 880px) {
       nav ul {
         display: none;
@@ -403,18 +409,18 @@
   <header>
     <div class="container nav-inner">
       <a href="index.html" class="logo">
-        <div class="logo-mark">P</div>
+        <img src="LogoTransparentBackground.png" alt="Parrela Music School Logo" />
         <div class="logo-text">
           Parrela Music School
-          <span>[STUDIO TAGLINE — e.g. Private Music &amp; Production]</span>
+          <span>Palo Alto &bull; In-Home Lessons</span>
         </div>
       </a>
 
       <nav>
         <ul>
-          <li><a href="index.html#lessons">Instruments</a></li>
+          <li><a href="index.html#instruments">Instruments</a></li>
           <li><a href="teachers.html" class="active">Meet the Teachers</a></li>
-          <li><a href="index.html#approach">Approach</a></li>
+          <li><a href="index.html#about">Approach</a></li>
           <li><a href="index.html#rates">Rates</a></li>
           <li><a href="index.html#contact" class="btn btn-primary nav-cta">Book a Trial</a></li>
         </ul>
@@ -425,10 +431,10 @@
   <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="container">
-      <span class="eyebrow">Our Faculty</span>
+      <span class="eyebrow">Our Palo Alto In-Home Faculty</span>
       <h1>Meet the Teachers</h1>
       <p>
-        Filter by instrument to explore our faculty, read each instructor's background, and book a trial lesson with the teacher who fits your goals best.
+        Filter by instrument to explore our traveling faculty, read each instructor's background, and book an in-home trial lesson with the teacher who fits your goals best.
       </p>
 
       <!-- INTERACTIVE INSTRUMENT FILTER -->
@@ -464,13 +470,13 @@
                 <span class="inst-tag">Piano</span>
               </div>
               <h3>Daniel Parrela</h3>
-              <div class="teacher-role">Founder &bull; Piano Instructor</div>
+              <div class="teacher-role">Founder &bull; In-Home Piano Instructor</div>
               <p class="teacher-bio">
-                [BIO — Write 2–3 sentences about Daniel's piano background, favorite genres to teach, and teaching philosophy at Parrela Music School.]
+                [BIO — Write 2–3 sentences about Daniel's piano background, favorite genres to teach, and in-home teaching philosophy at Parrela Music School.]
               </p>
             </div>
             <div class="teacher-actions">
-              <a href="index.html#contact" class="btn btn-outline" style="width: 100%;">Book Trial With Daniel</a>
+              <a href="index.html#contact" class="btn btn-outline" style="width: 100%;">Book Home Trial With Daniel</a>
             </div>
           </div>
         </article>
@@ -487,13 +493,13 @@
                 <span class="inst-tag">Piano</span>
               </div>
               <h3>Lily Chen</h3>
-              <div class="teacher-role">Piano Instructor</div>
+              <div class="teacher-role">In-Home Piano Instructor</div>
               <p class="teacher-bio">
-                [BIO — Write 2–3 sentences about Lily's musical training, experience teaching beginners through advanced pianists, and lesson style.]
+                [BIO — Write 2–3 sentences about Lily's musical training, experience teaching beginners through advanced pianists at home, and lesson style.]
               </p>
             </div>
             <div class="teacher-actions">
-              <a href="index.html#contact" class="btn btn-outline" style="width: 100%;">Book Trial With Lily</a>
+              <a href="index.html#contact" class="btn btn-outline" style="width: 100%;">Book Home Trial With Lily</a>
             </div>
           </div>
         </article>
@@ -511,13 +517,13 @@
                 <span class="inst-tag">Ukulele</span>
               </div>
               <h3>Sarah Coelho</h3>
-              <div class="teacher-role">Guitar &amp; Ukulele Instructor</div>
+              <div class="teacher-role">In-Home Guitar &amp; Ukulele Instructor</div>
               <p class="teacher-bio">
                 [BIO — Write 2–3 sentences about Sarah's acoustic/electric guitar and ukulele teaching, songwriting or chord work, and welcoming approach for new players.]
               </p>
             </div>
             <div class="teacher-actions">
-              <a href="index.html#contact" class="btn btn-outline" style="width: 100%;">Book Trial With Sarah</a>
+              <a href="index.html#contact" class="btn btn-outline" style="width: 100%;">Book Home Trial With Sarah</a>
             </div>
           </div>
         </article>
@@ -534,13 +540,13 @@
                 <span class="inst-tag">Guitar</span>
               </div>
               <h3>Santiago Martin</h3>
-              <div class="teacher-role">Guitar Instructor</div>
+              <div class="teacher-role">In-Home Guitar Instructor</div>
               <p class="teacher-bio">
-                [BIO — Write 2–3 sentences about Santiago's guitar styles (rock, classical, jazz, fingerstyle), performance background, and how he structures lessons.]
+                [BIO — Write 2–3 sentences about Santiago's guitar styles (rock, classical, jazz, fingerstyle), performance background, and how he structures home lessons.]
               </p>
             </div>
             <div class="teacher-actions">
-              <a href="index.html#contact" class="btn btn-outline" style="width: 100%;">Book Trial With Santiago</a>
+              <a href="index.html#contact" class="btn btn-outline" style="width: 100%;">Book Home Trial With Santiago</a>
             </div>
           </div>
         </article>
@@ -558,13 +564,13 @@
                 <span class="inst-tag">Audio Production</span>
               </div>
               <h3>Kash Bhat</h3>
-              <div class="teacher-role">Saxophone &amp; Audio Production Instructor</div>
+              <div class="teacher-role">In-Home Saxophone &amp; Audio Production Instructor</div>
               <p class="teacher-bio">
-                [BIO — Write 2–3 sentences bridging live performance and modern studio work—covering Kash's saxophone background alongside beatmaking, DAWs, and mixing.]
+                [BIO — Write 2–3 sentences bridging live performance and at-home production—covering Kash's saxophone background alongside beatmaking, DAWs, and mixing.]
               </p>
             </div>
             <div class="teacher-actions">
-              <a href="index.html#contact" class="btn btn-outline" style="width: 100%;">Book Trial With Kash</a>
+              <a href="index.html#contact" class="btn btn-outline" style="width: 100%;">Book Home Trial With Kash</a>
             </div>
           </div>
         </article>
@@ -581,13 +587,13 @@
                 <span class="inst-tag">Saxophone</span>
               </div>
               <h3>Owen [Last Name]</h3>
-              <div class="teacher-role">Saxophone Instructor</div>
+              <div class="teacher-role">In-Home Saxophone Instructor</div>
               <p class="teacher-bio">
                 [BIO — Write 2–3 sentences about Owen's saxophone specialization (jazz, concert band, tone development, improvisation) and teaching experience.]
               </p>
             </div>
             <div class="teacher-actions">
-              <a href="index.html#contact" class="btn btn-outline" style="width: 100%;">Book Trial With Owen</a>
+              <a href="index.html#contact" class="btn btn-outline" style="width: 100%;">Book Home Trial With Owen</a>
             </div>
           </div>
         </article>
@@ -604,13 +610,13 @@
                 <span class="inst-tag">Trumpet</span>
               </div>
               <h3>Ben Brubaker</h3>
-              <div class="teacher-role">Trumpet Instructor</div>
+              <div class="teacher-role">In-Home Trumpet Instructor</div>
               <p class="teacher-bio">
                 [BIO — Write 2–3 sentences about Ben's brass background, helping students build strong embouchure, range, and confidence in band, orchestra, or jazz.]
               </p>
             </div>
             <div class="teacher-actions">
-              <a href="index.html#contact" class="btn btn-outline" style="width: 100%;">Book Trial With Ben</a>
+              <a href="index.html#contact" class="btn btn-outline" style="width: 100%;">Book Home Trial With Ben</a>
             </div>
           </div>
         </article>
@@ -627,13 +633,13 @@
                 <span class="inst-tag">Cello</span>
               </div>
               <h3>Sam Amnisnov</h3>
-              <div class="teacher-role">Cello Instructor</div>
+              <div class="teacher-role">In-Home Cello Instructor</div>
               <p class="teacher-bio">
                 [BIO — Write 2–3 sentences about Sam's cello background, orchestral and solo performance experience, and supportive guidance for string students.]
               </p>
             </div>
             <div class="teacher-actions">
-              <a href="index.html#contact" class="btn btn-outline" style="width: 100%;">Book Trial With Sam</a>
+              <a href="index.html#contact" class="btn btn-outline" style="width: 100%;">Book Home Trial With Sam</a>
             </div>
           </div>
         </article>
@@ -650,13 +656,13 @@
                 <span class="inst-tag">Violin</span>
               </div>
               <h3>Brandon [Last Name]</h3>
-              <div class="teacher-role">Violin Instructor</div>
+              <div class="teacher-role">In-Home Violin Instructor</div>
               <p class="teacher-bio">
                 [BIO — Write 2–3 sentences about Brandon's violin training, technique fundamentals, and approach to helping students of all ages play expressively.]
               </p>
             </div>
             <div class="teacher-actions">
-              <a href="index.html#contact" class="btn btn-outline" style="width: 100%;">Book Trial With Brandon</a>
+              <a href="index.html#contact" class="btn btn-outline" style="width: 100%;">Book Home Trial With Brandon</a>
             </div>
           </div>
         </article>
@@ -668,7 +674,10 @@
   <!-- FOOTER -->
   <footer>
     <div class="container footer-inner">
-      <div>&copy; <span id="year"></span> Parrela Music School. All rights reserved.</div>
+      <div class="footer-brand">
+        <img src="LogoTransparentBackground.png" alt="Parrela Music School Logo" />
+        <span>&copy; <span id="year"></span> Parrela Music School &bull; Palo Alto In-Home Lessons. All rights reserved.</span>
+      </div>
       <div><a href="index.html" style="color: inherit; text-decoration: underline;">Back to Home</a></div>
     </div>
   </footer>
