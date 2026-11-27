@@ -970,6 +970,31 @@
       });
     });
 
+    // Pre-select Teacher & Instrument from URL Query Parameters (e.g. ?teacher=Daniel%20Parrela&instrument=Piano#contact)
+    const urlParams = new URLSearchParams(window.location.search);
+    const preselectedTeacher = urlParams.get('teacher');
+    const preselectedInstrument = urlParams.get('instrument');
+
+    if (preselectedInstrument) {
+      const instrumentSelect = document.getElementById('instrument');
+      const matchingInstrument = Array.from(instrumentSelect.options).find(
+        opt => opt.value.toLowerCase() === preselectedInstrument.toLowerCase()
+      );
+      if (matchingInstrument) {
+        instrumentSelect.value = matchingInstrument.value;
+      }
+    }
+
+    if (preselectedTeacher) {
+      const teacherSelect = document.getElementById('teacher');
+      const matchingTeacher = Array.from(teacherSelect.options).find(
+        opt => opt.value.toLowerCase() === preselectedTeacher.toLowerCase()
+      );
+      if (matchingTeacher) {
+        teacherSelect.value = matchingTeacher.value;
+      }
+    }
+
     // Contact Form Submission
     const lessonForm = document.getElementById('lessonForm');
     const formResult = document.getElementById('formResult');
