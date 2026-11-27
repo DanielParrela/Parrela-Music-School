@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Parrela Music School | Palo Alto In-Home Music Lessons</title>
+  <title>Parrela Music School | Palo Alto In-Home Music Lessons (Free 1st Trial)</title>
+  <meta name="description" content="100% in-home private music lessons in Palo Alto and the surrounding Peninsula. Book a free 1st trial lesson in piano, guitar, ukulele, saxophone, trumpet, violin, cello, or audio production." />
+  <meta property="og:title" content="Parrela Music School | Palo Alto In-Home Music Lessons" />
+  <meta property="og:description" content="Private 1-on-1 music lessons taught in your home in Palo Alto, CA. Every new student gets a free 1st trial lesson." />
+  <meta property="og:url" content="https://parrelamusicschool.web.app/" />
+  <meta property="og:type" content="website" />
   <link rel="icon" type="image/png" href="LogoTransparentBackground.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -339,6 +344,43 @@
       color: rgba(249, 249, 246, 0.8);
     }
 
+    /* HOW IT WORKS */
+    .how-it-works {
+      padding: 64px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      background-color: var(--cream);
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .step-card {
+      background-color: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius);
+      padding: 28px;
+      position: relative;
+    }
+
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: rgba(217, 93, 57, 0.12);
+      color: var(--terracotta);
+      font-family: 'Space Mono', monospace;
+      font-weight: 700;
+      font-size: 0.92rem;
+      margin-bottom: 14px;
+    }
+
     /* INSTRUMENTS */
     .instruments-section {
       background-color: var(--cream-alt);
@@ -423,11 +465,24 @@
     }
 
     .rates-section .section-header p {
-      color: rgba(249, 249, 246, 0.82);
+      color: rgba(249, 249, 246, 0.85);
     }
 
     .rates-section .mono-tag {
       color: #F4A28C;
+    }
+
+    .free-trial-pill {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background-color: rgba(249, 249, 246, 0.14);
+      border: 1px solid rgba(249, 249, 246, 0.28);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #FFFFFF;
     }
 
     .rates-grid {
@@ -620,10 +675,11 @@
       }
 
       .hero-grid,
+      .steps-grid,
       .about-grid,
       .contact-grid {
         grid-template-columns: 1fr;
-        gap: 32px;
+        gap: 28px;
       }
 
       .form-row {
@@ -655,7 +711,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#rates">Rates</a></li>
         <li><a href="teachers.html">Teachers</a></li>
-        <li><a href="#contact" class="btn btn-primary btn-sm">Book a Lesson</a></li>
+        <li><a href="#contact" class="btn btn-primary btn-sm">Free 1st Lesson</a></li>
       </ul>
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
         <span></span>
@@ -670,7 +726,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#rates">Rates</a></li>
         <li><a href="teachers.html">Teachers</a></li>
-        <li><a href="#contact" class="btn btn-primary">Book a Lesson</a></li>
+        <li><a href="#contact" class="btn btn-primary">Free 1st Lesson</a></li>
       </ul>
     </div>
   </header>
@@ -679,32 +735,57 @@
   <section class="hero">
     <div class="container hero-grid">
       <div>
-        <span class="mono-tag">PALO ALTO • 100% IN-HOME LESSONS</span>
+        <span class="mono-tag">PALO ALTO • 100% IN-HOME • FREE 1ST TRIAL</span>
         <h1>Private Music Lessons Taught in Your Home.</h1>
         <p class="lead">
-          Skip the after-school commute. One-on-one in-home instruction in piano, guitar, strings, woodwinds, brass, and audio production with dedicated Palo Alto musicians who travel directly to your door.
+          Skip the after-school commute. Start with a <strong>free 1st in-home trial lesson</strong> in piano, guitar, strings, woodwinds, brass, or audio production with dedicated Palo Alto musicians who travel directly to your door.
         </p>
         <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">Book an In-Home Intro</a>
+          <a href="#contact" class="btn btn-primary">Book Free 1st Lesson</a>
           <a href="teachers.html" class="btn btn-secondary">Meet the Teachers</a>
         </div>
       </div>
 
       <div class="hero-card">
-        <span class="mono-tag">NOW ENROLLING IN PALO ALTO</span>
+        <span class="mono-tag">FIRST LESSON IS FREE</span>
         <h3>All Ages &amp; Skill Levels</h3>
         <p>
-          Whether you are picking up an instrument for the very first time or preparing for auditions and recording sessions, our instructors come straight to your living room.
+          Try a full 1-on-1 in-home trial lesson at zero cost before committing. Whether you are a complete beginner or preparing for auditions, our instructors come straight to your living room.
         </p>
         <div class="hero-stats">
+          <div>
+            <span class="stat-num">$0</span>
+            <span class="stat-desc">1st Trial Lesson</span>
+          </div>
           <div>
             <span class="stat-num">9</span>
             <span class="stat-desc">Traveling Faculty</span>
           </div>
-          <div>
-            <span class="stat-num">8</span>
-            <span class="stat-desc">Instruments &amp; Prod.</span>
-          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS SECTION -->
+  <section class="how-it-works">
+    <div class="container">
+      <span class="mono-tag">SIMPLE 3-STEP START</span>
+      <h2>How In-Home Lessons Work</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h3>Choose Your Instrument</h3>
+          <p>Browse our 9 Palo Alto instructors or select "Match Me (Best Fit)" and we'll pair you with the ideal teacher.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h3>Take Your Free 1st Trial</h3>
+          <p>Your teacher visits your home for a complimentary introductory lesson so you can meet face-to-face with zero obligation.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h3>Grow Every Week at Home</h3>
+          <p>Lock in a convenient weekly slot on your own home instrument—no driving, traffic, or waiting rooms.</p>
         </div>
       </div>
     </div>
@@ -785,8 +866,8 @@
 
       <div class="about-pillars">
         <div class="pillar-box">
-          <h3>Tailored Curriculum</h3>
-          <p>Custom lesson plans adapted to each student's pace, experience level, and musical interests.</p>
+          <h3>Free 1st Trial Lesson</h3>
+          <p>Meet your teacher in your home and experience a full lesson before deciding on a weekly schedule.</p>
         </div>
         <div class="pillar-box">
           <h3>Zero Commute Stress</h3>
@@ -807,6 +888,7 @@
         <span class="mono-tag">IN-HOME TUITION &amp; PACKAGES</span>
         <h2>Simple, Transparent Lesson Rates</h2>
         <p>Weekly private in-home one-on-one lessons with no long-term lock-in contracts.</p>
+        <span class="free-trial-pill">★ 1ST TRIAL LESSON IS ALWAYS FREE</span>
       </div>
 
       <div class="rates-grid">
@@ -820,12 +902,12 @@
             </div>
             <p>Ideal for younger beginners building focus and foundational habits at home.</p>
             <ul class="rate-features">
+              <li>1st introductory trial lesson is FREE</li>
               <li>Weekly 1-on-1 in-home instruction</li>
-              <li>Custom practice notes after class</li>
               <li>Instructor travels directly to you</li>
             </ul>
           </div>
-          <a href="#contact" class="btn btn-secondary rate-select-btn" data-plan="30-Minute Lesson (Starting at $30/session)" style="width: 100%;">Inquire Now</a>
+          <a href="#contact" class="btn btn-secondary rate-select-btn" data-plan="30-Minute Lesson (Starting at $30/session) — Free 1st Trial" style="width: 100%;">Book Free 1st Trial</a>
         </div>
 
         <div class="rate-card featured">
@@ -838,12 +920,12 @@
             </div>
             <p>Balanced depth for developing technique, repertoire, and theory.</p>
             <ul class="rate-features">
-              <li>Weekly 1-on-1 in-home instruction</li>
+              <li>1st introductory trial lesson is FREE</li>
               <li>Technique, repertoire &amp; ear training</li>
               <li>Recital &amp; audition preparation</li>
             </ul>
           </div>
-          <a href="#contact" class="btn btn-primary rate-select-btn" data-plan="45-Minute Lesson (Starting at $37.50/session)" style="width: 100%;">Book 45-Min Intro</a>
+          <a href="#contact" class="btn btn-primary rate-select-btn" data-plan="45-Minute Lesson (Starting at $37.50/session) — Free 1st Trial" style="width: 100%;">Book Free 45-Min Trial</a>
         </div>
 
         <div class="rate-card">
@@ -856,16 +938,16 @@
             </div>
             <p>Best for dedicated teens, adults, multi-instrumentalists, and production.</p>
             <ul class="rate-features">
-              <li>Full hour of deep-dive home mentorship</li>
+              <li>1st introductory trial lesson is FREE</li>
               <li>Advanced repertoire or DAW projects</li>
               <li>Convenient weekly home visits</li>
             </ul>
           </div>
-          <a href="#contact" class="btn btn-secondary rate-select-btn" data-plan="60-Minute Lesson (Starting at $45/session)" style="width: 100%;">Inquire Now</a>
+          <a href="#contact" class="btn btn-secondary rate-select-btn" data-plan="60-Minute Lesson (Starting at $45/session) — Free 1st Trial" style="width: 100%;">Book Free 1st Trial</a>
         </div>
       </div>
 
-      <p class="rates-note">* Rates vary slightly depending on instrument, instructor, and travel distance.</p>
+      <p class="rates-note">* Your 1st trial lesson is completely free. Ongoing weekly rates vary slightly depending on instrument, instructor, and travel distance.</p>
     </div>
   </section>
 
@@ -874,9 +956,9 @@
     <div class="container">
       <div class="contact-grid">
         <div class="contact-info">
-          <span class="mono-tag">START YOUR JOURNEY</span>
-          <h2>Book an In-Home Intro Lesson</h2>
-          <p>Ready to get started or have questions about finding the right traveling teacher? Fill out the form or reach out directly.</p>
+          <span class="mono-tag">FREE 1ST LESSON • ZERO OBLIGATION</span>
+          <h2>Book Your Free 1st In-Home Lesson</h2>
+          <p>Ready to try a free introductory lesson or have questions for our team? Fill out the form, call, or text us directly.</p>
           
           <div class="info-list">
             <div class="info-item">
@@ -888,7 +970,7 @@
               <p>Flexible In-Home Scheduling — Morning, Afternoon &amp; Evening Slots Available</p>
             </div>
             <div class="info-item">
-              <span class="mono-label">PHONE</span>
+              <span class="mono-label">CALL OR TEXT</span>
               <p><a href="tel:6504444219" style="color: inherit; text-decoration: underline;">(650) 444-4219</a></p>
             </div>
             <div class="info-item">
@@ -901,7 +983,7 @@
         <div class="contact-form-card">
           <form id="lessonForm" action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="7cea56fa-3fa7-49e9-aa32-db47715a5310">
-            <input type="hidden" name="subject" value="New In-Home Lesson Inquiry - Parrela Music School">
+            <input type="hidden" name="subject" value="New Free 1st Lesson Request - Parrela Music School">
             <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
             <div class="form-row">
@@ -951,20 +1033,20 @@
                   <option value="Sarah Coelho">Sarah Coelho (Guitar / Uke)</option>
                   <option value="Santiago Martin">Santiago Martin (Guitar)</option>
                   <option value="Kash Bhat">Kash Bhat (Sax / Production)</option>
-                  <option value="Owen">Owen (Saxophone)</option>
+                  <option value="Owen Jess">Owen Jess (Saxophone)</option>
                   <option value="Ben Brubaker">Ben Brubaker (Trumpet)</option>
                   <option value="Sam Amnisnov">Sam Amnisnov (Cello)</option>
-                  <option value="Brandon">Brandon (Violin)</option>
+                  <option value="Brandon Seo">Brandon Seo (Violin)</option>
                 </select>
               </div>
             </div>
 
             <div class="form-group">
-              <label for="message">Experience Level &amp; Goals</label>
-              <textarea id="message" name="message" rows="3" placeholder="Beginner or experienced? Preferred days/times for in-home visits?"></textarea>
+              <label for="message">Questions, Experience &amp; Goals</label>
+              <textarea id="message" name="message" rows="3" placeholder="Any questions for us? Beginner or experienced? Preferred days/times for your free 1st lesson?"></textarea>
             </div>
 
-            <button type="submit" id="submitBtn" class="btn btn-primary" style="width: 100%;">Request In-Home Intro Lesson</button>
+            <button type="submit" id="submitBtn" class="btn btn-primary" style="width: 100%;">Claim Free 1st In-Home Lesson</button>
             <p id="formResult" style="margin-top: 12px; font-size: 0.9rem; text-align: center;"></p>
           </form>
         </div>
@@ -1071,18 +1153,18 @@
         const result = await response.json();
         if (response.status === 200) {
           formResult.style.color = '#005B5C';
-          formResult.textContent = 'Inquiry sent! We will reach out shortly to schedule your in-home lesson.';
+          formResult.textContent = 'Inquiry sent! We will reach out shortly to schedule your free 1st in-home lesson.';
           lessonForm.reset();
         } else {
           formResult.style.color = '#D95D39';
-          formResult.textContent = result.message || 'Something went wrong. Please email or call us directly.';
+          formResult.textContent = result.message || 'Something went wrong. Please email, call, or text us directly.';
         }
       } catch (error) {
         formResult.style.color = '#D95D39';
         formResult.textContent = 'Network error. Please email parrelamusicschool@gmail.com directly.';
       } finally {
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Request In-Home Intro Lesson';
+        submitBtn.textContent = 'Claim Free 1st In-Home Lesson';
       }
     });
   </script>

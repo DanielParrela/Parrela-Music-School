@@ -4,26 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Meet the Teachers — Parrela Music School | Palo Alto In-Home Lessons</title>
+  <meta name="description" content="Meet the traveling in-home music teachers at Parrela Music School in Palo Alto. Book a free 1st trial lesson in piano, guitar, ukulele, saxophone, trumpet, violin, cello, or audio production." />
+  <meta property="og:title" content="Meet the Teachers — Parrela Music School" />
+  <meta property="og:description" content="Filter by instrument and book a free 1st in-home trial lesson with our Palo Alto music instructors." />
+  <meta property="og:url" content="https://parrelamusicschool.web.app/teachers.html" />
+  <meta property="og:type" content="website" />
   <link rel="icon" type="image/png" href="LogoTransparentBackground.png" />
 
-  <!-- Google Fonts: Outfit (Headings) & Space Mono (Monospace Details) -->
+  <!-- Google Fonts: Outfit & Space Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      --bg-cream: #F9F9F6;
-      --bg-cream-alt: #F1F0EA;
-      --primary-teal: #005B5C;
-      --primary-teal-dark: #004344;
-      --accent-terracotta: #D95D39;
-      --accent-terracotta-hover: #C04D2B;
-      --text-main: #182626;
-      --text-muted: #4A5D5D;
+      --teal: #005B5C;
+      --teal-dark: #004344;
+      --cream: #F9F9F6;
+      --cream-alt: #F0EFEA;
+      --terracotta: #D95D39;
+      --terracotta-dark: #B84929;
+      --ink: #1A2424;
+      --muted: #526161;
       --border-subtle: rgba(0, 91, 92, 0.16);
-      --font-heading: 'Outfit', sans-serif;
-      --font-mono: 'Space Mono', monospace;
+      --radius: 14px;
     }
 
     * {
@@ -32,105 +36,71 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      background-color: var(--bg-cream);
-      color: var(--text-main);
-      font-family: var(--font-heading);
+      background-color: var(--cream);
+      color: var(--ink);
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
-    }
-
-    .eyebrow {
-      font-family: var(--font-mono);
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent-terracotta);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .eyebrow::before {
-      content: "";
-      display: inline-block;
-      width: 24px;
-      height: 2px;
-      background-color: var(--accent-terracotta);
-    }
-
-    h1, h2, h3 {
-      font-family: var(--font-heading);
-      color: var(--primary-teal);
-      line-height: 1.15;
-    }
-
-    h1 {
-      font-size: clamp(2.4rem, 4.5vw, 3.6rem);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-    }
-
-    h3 {
-      font-size: 1.45rem;
-      font-weight: 700;
     }
 
     .container {
       width: 100%;
       max-width: 1140px;
       margin: 0 auto;
-      padding: 0 1.5rem;
+      padding: 0 24px;
     }
 
-    /* Buttons */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-mono);
-      font-size: 0.82rem;
-      font-weight: 700;
+    .mono-tag {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
-      padding: 0.8rem 1.4rem;
-      border-radius: 6px;
-      text-decoration: none;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      border: 2px solid transparent;
+      font-weight: 700;
+      color: var(--terracotta);
+      display: inline-block;
+      margin-bottom: 12px;
     }
 
-    .btn-primary {
-      background-color: var(--accent-terracotta);
-      color: #FFFFFF;
+    h1, h2, h3 {
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--ink);
     }
 
-    .btn-primary:hover {
-      background-color: var(--accent-terracotta-hover);
-      transform: translateY(-2px);
+    h1 {
+      font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+      font-weight: 800;
+      margin-bottom: 16px;
     }
 
-    .btn-outline {
-      background-color: transparent;
-      color: var(--primary-teal);
-      border-color: var(--primary-teal);
+    h2 {
+      font-size: clamp(1.7rem, 3vw, 2.35rem);
+      font-weight: 700;
+      margin-bottom: 12px;
     }
 
-    .btn-outline:hover {
-      background-color: var(--primary-teal);
-      color: var(--bg-cream);
+    h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
     }
 
-    /* Header */
+    p {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    /* NAVIGATION (Unified with index.html) */
     header {
       position: sticky;
       top: 0;
       z-index: 100;
-      background-color: rgba(249, 249, 246, 0.95);
-      backdrop-filter: blur(8px);
+      background-color: rgba(249, 249, 246, 0.94);
+      backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border-subtle);
     }
 
@@ -138,72 +108,56 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 78px;
+      height: 76px;
     }
 
-    .logo {
+    .brand {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 12px;
       text-decoration: none;
-      color: var(--primary-teal);
+      color: var(--teal);
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
     }
 
-    .logo img {
-      width: 40px;
-      height: 40px;
+    .brand img {
+      height: 38px;
+      width: 38px;
       object-fit: contain;
       display: block;
     }
 
-    .logo-text {
-      font-family: var(--font-heading);
-      font-weight: 800;
-      font-size: 1.25rem;
-      letter-spacing: -0.01em;
-    }
-
-    .logo-text span {
-      display: block;
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      font-weight: 400;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--accent-terracotta);
-    }
-
-    nav ul {
+    .nav-links {
       display: flex;
       align-items: center;
+      gap: 28px;
       list-style: none;
-      gap: 1.85rem;
     }
 
-    nav a {
+    .nav-links a {
       text-decoration: none;
-      font-family: var(--font-mono);
-      font-size: 0.84rem;
-      color: var(--primary-teal);
-      font-weight: 700;
+      color: var(--ink);
+      font-weight: 500;
+      font-size: 0.98rem;
       transition: color 0.2s ease;
     }
 
-    nav a:hover,
-    nav a.active {
-      color: var(--accent-terracotta);
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--terracotta);
     }
 
-    .nav-cta {
-      padding: 0.6rem 1.15rem;
-      font-size: 0.78rem;
+    .nav-links a.active {
+      font-weight: 700;
     }
 
     .menu-toggle {
       display: none;
       background: transparent;
       border: 1px solid var(--border-subtle);
-      border-radius: 8px;
+      border-radius: 10px;
       width: 44px;
       height: 44px;
       align-items: center;
@@ -218,7 +172,7 @@
       display: block;
       width: 22px;
       height: 2px;
-      background-color: var(--primary-teal);
+      background-color: var(--teal);
       border-radius: 2px;
       transition: transform 0.22s ease, opacity 0.22s ease;
     }
@@ -237,9 +191,9 @@
 
     .mobile-drawer {
       display: none;
-      background-color: var(--bg-cream);
+      background-color: var(--cream);
       border-bottom: 1px solid var(--border-subtle);
-      padding: 1.15rem 1.5rem 1.5rem;
+      padding: 18px 24px 24px;
     }
 
     .mobile-drawer.open {
@@ -250,111 +204,158 @@
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 0.85rem;
+      gap: 14px;
     }
 
     .mobile-drawer a:not(.btn) {
       display: block;
       text-decoration: none;
-      font-family: var(--font-mono);
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--primary-teal);
-      padding: 0.35rem 0;
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 1.05rem;
+      padding: 6px 0;
     }
 
     .mobile-drawer a:not(.btn):hover,
     .mobile-drawer a:not(.btn).active {
-      color: var(--accent-terracotta);
+      color: var(--terracotta);
     }
 
     .mobile-drawer .btn {
       width: 100%;
-      margin-top: 0.4rem;
+      margin-top: 6px;
     }
 
-    /* Page Hero */
+    /* BUTTONS (Unified pill style with index.html) */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 26px;
+      border-radius: 999px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 0.98rem;
+      text-decoration: none;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background-color: var(--terracotta);
+      color: #FFFFFF;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--terracotta-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--teal);
+      border-color: var(--teal);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--teal);
+      color: #FFFFFF;
+    }
+
+    .btn-sm {
+      padding: 9px 18px;
+      font-size: 0.9rem;
+    }
+
+    /* PAGE HERO */
     .page-hero {
-      padding: 4.5rem 0 3.25rem;
+      padding: 72px 0 44px;
       border-bottom: 1px solid var(--border-subtle);
     }
 
-    .page-hero p {
-      font-family: var(--font-mono);
-      font-size: 0.96rem;
-      color: var(--text-muted);
-      max-width: 64ch;
-      margin-top: 1rem;
+    .page-hero p.lead {
+      max-width: 640px;
+      font-size: 1.12rem;
+      color: var(--muted);
     }
 
-    /* Filter Bar */
+    /* FILTER BAR */
     .filter-bar {
-      padding: 2rem 0 1rem;
+      padding: 28px 0 12px;
       display: flex;
       flex-wrap: wrap;
-      gap: 0.6rem;
+      gap: 8px;
       align-items: center;
     }
 
     .filter-label {
-      font-family: var(--font-mono);
+      font-family: 'Space Mono', monospace;
       font-size: 0.75rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: var(--text-muted);
-      margin-right: 0.5rem;
+      color: var(--muted);
+      margin-right: 6px;
     }
 
     .filter-btn {
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      font-weight: 700;
-      padding: 0.55rem 1rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 8px 16px;
       border-radius: 999px;
       border: 1px solid var(--border-subtle);
       background-color: #FFFFFF;
-      color: var(--primary-teal);
+      color: var(--ink);
       cursor: pointer;
       transition: all 0.18s ease;
     }
 
     .filter-btn:hover {
-      border-color: var(--accent-terracotta);
-      color: var(--accent-terracotta);
+      border-color: var(--teal);
+      color: var(--teal);
     }
 
     .filter-btn.active {
-      background-color: var(--primary-teal);
-      color: var(--bg-cream);
-      border-color: var(--primary-teal);
+      background-color: var(--teal);
+      color: #FFFFFF;
+      border-color: var(--teal);
     }
 
-    /* Teachers Grid */
+    .filter-status {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    /* TEACHERS GRID */
     .teachers-section {
-      padding: 2rem 0 5.5rem;
+      padding: 40px 0 88px;
     }
 
     .teachers-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
     }
 
     .teacher-card {
       background-color: #FFFFFF;
       border: 1px solid var(--border-subtle);
-      border-radius: 12px;
+      border-radius: var(--radius);
       overflow: hidden;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: transform 0.2s ease, border-color 0.2s ease;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
     }
 
     .teacher-card:hover {
       transform: translateY(-4px);
-      border-color: var(--accent-terracotta);
+      border-color: var(--teal);
+      box-shadow: 0 12px 28px rgba(0, 91, 92, 0.08);
     }
 
     .teacher-card.hidden {
@@ -363,18 +364,17 @@
 
     .teacher-photo {
       height: 220px;
-      background-color: var(--primary-teal);
+      background-color: var(--teal);
       color: rgba(249, 249, 246, 0.85);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 1.5rem;
-      font-family: var(--font-mono);
+      padding: 24px;
+      font-family: 'Space Mono', monospace;
       font-size: 0.78rem;
-      border-bottom: 4px solid var(--accent-terracotta);
-      position: relative;
+      border-bottom: 4px solid var(--terracotta);
     }
 
     .teacher-initials {
@@ -382,18 +382,18 @@
       height: 64px;
       border-radius: 50%;
       background-color: rgba(249, 249, 246, 0.12);
-      border: 2px solid var(--accent-terracotta);
+      border: 2px solid var(--terracotta);
       display: grid;
       place-items: center;
-      font-family: var(--font-heading);
+      font-family: 'Outfit', sans-serif;
       font-size: 1.5rem;
       font-weight: 800;
-      color: var(--bg-cream);
-      margin-bottom: 0.65rem;
+      color: #FFFFFF;
+      margin-bottom: 10px;
     }
 
     .teacher-body {
-      padding: 1.85rem;
+      padding: 26px;
       flex-grow: 1;
       display: flex;
       flex-direction: column;
@@ -403,51 +403,79 @@
     .instrument-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.45rem;
-      margin-bottom: 0.85rem;
+      gap: 6px;
+      margin-bottom: 12px;
     }
 
     .inst-tag {
-      font-family: var(--font-mono);
+      font-family: 'Space Mono', monospace;
       font-size: 0.7rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      padding: 0.25rem 0.6rem;
-      border-radius: 4px;
+      padding: 4px 10px;
+      border-radius: 6px;
       background-color: rgba(217, 93, 57, 0.12);
-      color: var(--accent-terracotta);
+      color: var(--terracotta);
     }
 
     .teacher-body h3 {
-      margin-bottom: 0.35rem;
+      margin-bottom: 4px;
     }
 
     .teacher-role {
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      color: var(--text-muted);
-      margin-bottom: 1rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.76rem;
+      color: var(--muted);
+      margin-bottom: 14px;
     }
 
     .teacher-bio {
-      color: var(--text-main);
-      font-size: 0.96rem;
-      margin-bottom: 1.5rem;
+      color: var(--muted);
+      font-size: 0.98rem;
+      margin-bottom: 22px;
     }
 
     .teacher-actions {
-      padding-top: 1rem;
-      border-top: 1px dashed var(--border-subtle);
+      padding-top: 16px;
+      border-top: 1px solid var(--border-subtle);
     }
 
-    /* Footer */
+    /* CLOSING MATCH-ME CALLOUT CARD */
+    .match-callout {
+      margin-top: 56px;
+      background-color: var(--teal);
+      color: var(--cream);
+      border-radius: var(--radius);
+      padding: 44px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      box-shadow: 0 18px 40px rgba(0, 91, 92, 0.14);
+    }
+
+    .match-callout .mono-tag {
+      color: #F4A28C;
+    }
+
+    .match-callout h2 {
+      color: #FFFFFF;
+      margin-bottom: 10px;
+    }
+
+    .match-callout p {
+      color: rgba(249, 249, 246, 0.85);
+      max-width: 560px;
+    }
+
+    /* FOOTER (Unified with index.html) */
     footer {
-      background-color: var(--primary-teal);
-      color: rgba(249, 249, 246, 0.8);
-      padding: 2.75rem 0;
-      font-family: var(--font-mono);
-      font-size: 0.82rem;
+      background-color: var(--ink);
+      color: rgba(249, 249, 246, 0.75);
+      padding: 40px 0;
+      font-size: 0.92rem;
     }
 
     .footer-inner {
@@ -455,39 +483,38 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
-      gap: 1rem;
+      gap: 16px;
     }
 
     .footer-brand {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 10px;
     }
 
     .footer-brand img {
-      width: 30px;
       height: 30px;
+      width: 30px;
       object-fit: contain;
     }
 
     .footer-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.35rem;
+      gap: 22px;
     }
 
     .footer-links a {
-      color: rgba(249, 249, 246, 0.85);
+      color: rgba(249, 249, 246, 0.75);
       text-decoration: none;
-      transition: color 0.2s ease;
     }
 
     .footer-links a:hover {
       color: #FFFFFF;
     }
 
-    @media (max-width: 880px) {
-      nav ul {
+    @media (max-width: 860px) {
+      .nav-links {
         display: none;
       }
 
@@ -495,16 +522,24 @@
         display: flex;
       }
 
-      .logo-text {
-        font-size: 1.1rem;
+      .brand {
+        font-size: 1.12rem;
       }
 
       .page-hero {
-        padding: 3rem 0 2.25rem;
+        padding: 48px 0 32px;
+      }
+
+      .teachers-section {
+        padding: 32px 0 64px;
       }
 
       .teacher-body {
-        padding: 1.4rem;
+        padding: 22px;
+      }
+
+      .match-callout {
+        padding: 30px 24px;
       }
     }
   </style>
@@ -514,23 +549,18 @@
   <!-- TOP NAVIGATION -->
   <header>
     <div class="container nav-inner">
-      <a href="index.html" class="logo">
+      <a href="index.html" class="brand">
         <img src="LogoTransparentBackground.png" alt="Parrela Music School Logo" />
-        <div class="logo-text">
-          Parrela Music School
-          <span>Palo Alto &bull; In-Home Lessons</span>
-        </div>
+        <span>Parrela Music School</span>
       </a>
 
-      <nav>
-        <ul>
-          <li><a href="index.html#instruments">Instruments</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#rates">Rates</a></li>
-          <li><a href="teachers.html" class="active">Teachers</a></li>
-          <li><a href="index.html#contact" class="btn btn-primary nav-cta">Book a Lesson</a></li>
-        </ul>
-      </nav>
+      <ul class="nav-links">
+        <li><a href="index.html#instruments">Instruments</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#rates">Rates</a></li>
+        <li><a href="teachers.html" class="active">Teachers</a></li>
+        <li><a href="index.html#contact" class="btn btn-primary btn-sm">Free 1st Lesson</a></li>
+      </ul>
 
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
         <span></span>
@@ -545,7 +575,7 @@
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#rates">Rates</a></li>
         <li><a href="teachers.html" class="active">Teachers</a></li>
-        <li><a href="index.html#contact" class="btn btn-primary">Book a Lesson</a></li>
+        <li><a href="index.html#contact" class="btn btn-primary">Free 1st Lesson</a></li>
       </ul>
     </div>
   </header>
@@ -553,25 +583,26 @@
   <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="container">
-      <span class="eyebrow">Our Palo Alto In-Home Faculty</span>
+      <span class="mono-tag">PALO ALTO IN-HOME FACULTY • FREE 1ST TRIAL</span>
       <h1>Meet the Teachers</h1>
-      <p>
-        Filter by instrument to explore our traveling faculty, read each instructor's background, and book an in-home trial lesson with the teacher who fits your goals best.
+      <p class="lead">
+        Filter by instrument to explore our traveling faculty, read each instructor's background, and book a <strong>free 1st in-home trial lesson</strong> with the teacher who fits your goals best.
       </p>
 
-      <!-- INTERACTIVE INSTRUMENT FILTER -->
+      <!-- INTERACTIVE INSTRUMENT FILTER (Counts update automatically via JS) -->
       <div class="filter-bar" role="group" aria-label="Filter teachers by instrument">
         <span class="filter-label">Filter:</span>
-        <button class="filter-btn active" data-filter="all">All Teachers (9)</button>
-        <button class="filter-btn" data-filter="piano">Piano</button>
-        <button class="filter-btn" data-filter="guitar">Guitar</button>
-        <button class="filter-btn" data-filter="ukulele">Ukulele</button>
-        <button class="filter-btn" data-filter="saxophone">Saxophone</button>
-        <button class="filter-btn" data-filter="trumpet">Trumpet</button>
-        <button class="filter-btn" data-filter="cello">Cello</button>
-        <button class="filter-btn" data-filter="violin">Violin</button>
-        <button class="filter-btn" data-filter="production">Audio Production</button>
+        <button class="filter-btn active" data-filter="all" data-label="in-home" id="allTeachersBtn">All Teachers</button>
+        <button class="filter-btn" data-filter="piano" data-label="Piano">Piano</button>
+        <button class="filter-btn" data-filter="guitar" data-label="Guitar">Guitar</button>
+        <button class="filter-btn" data-filter="ukulele" data-label="Ukulele">Ukulele</button>
+        <button class="filter-btn" data-filter="saxophone" data-label="Saxophone">Saxophone</button>
+        <button class="filter-btn" data-filter="trumpet" data-label="Trumpet">Trumpet</button>
+        <button class="filter-btn" data-filter="cello" data-label="Cello">Cello</button>
+        <button class="filter-btn" data-filter="violin" data-label="Violin">Violin</button>
+        <button class="filter-btn" data-filter="production" data-label="Audio Production">Audio Production</button>
       </div>
+      <p class="filter-status" id="filterStatus"></p>
     </div>
   </section>
 
@@ -598,7 +629,7 @@
               </p>
             </div>
             <div class="teacher-actions">
-              <a href="index.html?teacher=Daniel%20Parrela&instrument=Piano#contact" class="btn btn-outline" style="width: 100%;">Book Home Trial With Daniel</a>
+              <a href="index.html?teacher=Daniel%20Parrela&instrument=Piano#contact" class="btn btn-secondary" style="width: 100%;">Book Free Trial With Daniel</a>
             </div>
           </div>
         </article>
@@ -621,7 +652,7 @@
               </p>
             </div>
             <div class="teacher-actions">
-              <a href="index.html?teacher=Lily%20Chen&instrument=Piano#contact" class="btn btn-outline" style="width: 100%;">Book Home Trial With Lily</a>
+              <a href="index.html?teacher=Lily%20Chen&instrument=Piano#contact" class="btn btn-secondary" style="width: 100%;">Book Free Trial With Lily</a>
             </div>
           </div>
         </article>
@@ -645,7 +676,7 @@
               </p>
             </div>
             <div class="teacher-actions">
-              <a href="index.html?teacher=Sarah%20Coelho&instrument=Guitar#contact" class="btn btn-outline" style="width: 100%;">Book Home Trial With Sarah</a>
+              <a href="index.html?teacher=Sarah%20Coelho&instrument=Guitar#contact" class="btn btn-secondary" style="width: 100%;">Book Free Trial With Sarah</a>
             </div>
           </div>
         </article>
@@ -668,7 +699,7 @@
               </p>
             </div>
             <div class="teacher-actions">
-              <a href="index.html?teacher=Santiago%20Martin&instrument=Guitar#contact" class="btn btn-outline" style="width: 100%;">Book Home Trial With Santiago</a>
+              <a href="index.html?teacher=Santiago%20Martin&instrument=Guitar#contact" class="btn btn-secondary" style="width: 100%;">Book Free Trial With Santiago</a>
             </div>
           </div>
         </article>
@@ -692,30 +723,30 @@
               </p>
             </div>
             <div class="teacher-actions">
-              <a href="index.html?teacher=Kash%20Bhat&instrument=Saxophone#contact" class="btn btn-outline" style="width: 100%;">Book Home Trial With Kash</a>
+              <a href="index.html?teacher=Kash%20Bhat&instrument=Saxophone#contact" class="btn btn-secondary" style="width: 100%;">Book Free Trial With Kash</a>
             </div>
           </div>
         </article>
 
-        <!-- 6. OWEN [LAST NAME] -->
+        <!-- 6. OWEN JESS -->
         <article class="teacher-card" data-instruments="saxophone">
           <div class="teacher-photo">
-            <div class="teacher-initials">O</div>
-            <span>[PHOTO PLACEHOLDER — Owen]</span>
+            <div class="teacher-initials">OJ</div>
+            <span>[PHOTO PLACEHOLDER — Owen Jess]</span>
           </div>
           <div class="teacher-body">
             <div>
               <div class="instrument-tags">
                 <span class="inst-tag">Saxophone</span>
               </div>
-              <h3>Owen [Last Name]</h3>
+              <h3>Owen Jess</h3>
               <div class="teacher-role">In-Home Saxophone Instructor</div>
               <p class="teacher-bio">
                 [BIO — Write 2–3 sentences about Owen's saxophone specialization (jazz, concert band, tone development, improvisation) and teaching experience.]
               </p>
             </div>
             <div class="teacher-actions">
-              <a href="index.html?teacher=Owen&instrument=Saxophone#contact" class="btn btn-outline" style="width: 100%;">Book Home Trial With Owen</a>
+              <a href="index.html?teacher=Owen%20Jess&instrument=Saxophone#contact" class="btn btn-secondary" style="width: 100%;">Book Free Trial With Owen</a>
             </div>
           </div>
         </article>
@@ -738,7 +769,7 @@
               </p>
             </div>
             <div class="teacher-actions">
-              <a href="index.html?teacher=Ben%20Brubaker&instrument=Trumpet#contact" class="btn btn-outline" style="width: 100%;">Book Home Trial With Ben</a>
+              <a href="index.html?teacher=Ben%20Brubaker&instrument=Trumpet#contact" class="btn btn-secondary" style="width: 100%;">Book Free Trial With Ben</a>
             </div>
           </div>
         </article>
@@ -761,34 +792,46 @@
               </p>
             </div>
             <div class="teacher-actions">
-              <a href="index.html?teacher=Sam%20Amnisnov&instrument=Cello#contact" class="btn btn-outline" style="width: 100%;">Book Home Trial With Sam</a>
+              <a href="index.html?teacher=Sam%20Amnisnov&instrument=Cello#contact" class="btn btn-secondary" style="width: 100%;">Book Free Trial With Sam</a>
             </div>
           </div>
         </article>
 
-        <!-- 9. BRANDON [LAST NAME] -->
+        <!-- 9. BRANDON SEO -->
         <article class="teacher-card" data-instruments="violin">
           <div class="teacher-photo">
-            <div class="teacher-initials">B</div>
-            <span>[PHOTO PLACEHOLDER — Brandon]</span>
+            <div class="teacher-initials">BS</div>
+            <span>[PHOTO PLACEHOLDER — Brandon Seo]</span>
           </div>
           <div class="teacher-body">
             <div>
               <div class="instrument-tags">
                 <span class="inst-tag">Violin</span>
               </div>
-              <h3>Brandon [Last Name]</h3>
+              <h3>Brandon Seo</h3>
               <div class="teacher-role">In-Home Violin Instructor</div>
               <p class="teacher-bio">
                 [BIO — Write 2–3 sentences about Brandon's violin training, technique fundamentals, and approach to helping students of all ages play expressively.]
               </p>
             </div>
             <div class="teacher-actions">
-              <a href="index.html?teacher=Brandon&instrument=Violin#contact" class="btn btn-outline" style="width: 100%;">Book Home Trial With Brandon</a>
+              <a href="index.html?teacher=Brandon%20Seo&instrument=Violin#contact" class="btn btn-secondary" style="width: 100%;">Book Free Trial With Brandon</a>
             </div>
           </div>
         </article>
 
+      </div>
+
+      <!-- CLOSING CALLOUT CARD -->
+      <div class="match-callout">
+        <div>
+          <span class="mono-tag">NOT SURE WHO TO CHOOSE?</span>
+          <h2>Let Us Match You With the Best Fit</h2>
+          <p>
+            Tell us your instrument, schedule, and musical goals, and we'll pair you with the ideal Palo Alto teacher for a free 1st in-home trial lesson.
+          </p>
+        </div>
+        <a href="index.html?teacher=Match%20Me%20(Best%20Fit)#contact" class="btn btn-primary">Book Free Matched Trial</a>
       </div>
     </div>
   </section>
@@ -831,32 +874,50 @@
 
     const filterButtons = document.querySelectorAll(".filter-btn");
     const teacherCards = document.querySelectorAll(".teacher-card");
+    const allTeachersBtn = document.getElementById("allTeachersBtn");
+    const filterStatus = document.getElementById("filterStatus");
+
+    // Automatically set total count on "All Teachers (X)"
+    allTeachersBtn.textContent = `All Teachers (${teacherCards.length})`;
 
     function applyFilter(filter) {
+      let visibleCount = 0;
+      let activeLabel = "in-home";
+
       filterButtons.forEach((btn) => {
-        btn.classList.toggle("active", btn.dataset.filter === filter);
+        const isMatch = btn.dataset.filter === filter;
+        btn.classList.toggle("active", isMatch);
+        if (isMatch && btn.dataset.label) {
+          activeLabel = btn.dataset.label;
+        }
       });
 
       teacherCards.forEach((card) => {
         const instruments = card.dataset.instruments.split(" ");
         if (filter === "all" || instruments.includes(filter)) {
           card.classList.remove("hidden");
+          visibleCount++;
         } else {
           card.classList.add("hidden");
         }
       });
+
+      const noun = visibleCount === 1 ? "instructor" : "instructors";
+      if (filter === "all") {
+        filterStatus.textContent = `Showing all ${visibleCount} in-home ${noun}`;
+      } else {
+        filterStatus.textContent = `Showing ${visibleCount} ${activeLabel} ${noun}`;
+      }
     }
 
     filterButtons.forEach((btn) => {
       btn.addEventListener("click", () => applyFilter(btn.dataset.filter));
     });
 
-    // Automatically apply filter if coming from homepage instrument card link (e.g. teachers.html?filter=piano)
+    // Automatically apply filter from URL query parameter (or initialize default count)
     const params = new URLSearchParams(window.location.search);
     const initialFilter = params.get("filter");
-    if (initialFilter) {
-      applyFilter(initialFilter);
-    }
+    applyFilter(initialFilter || "all");
   </script>
 </body>
 </html>
