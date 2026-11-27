@@ -154,6 +154,78 @@
       color: var(--terracotta);
     }
 
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      width: 44px;
+      height: 44px;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background-color: var(--teal);
+      border-radius: 2px;
+      transition: transform 0.22s ease, opacity 0.22s ease;
+    }
+
+    .menu-toggle.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .mobile-drawer {
+      display: none;
+      background-color: var(--cream);
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 18px 24px 24px;
+    }
+
+    .mobile-drawer.open {
+      display: block;
+    }
+
+    .mobile-drawer ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .mobile-drawer a:not(.btn) {
+      display: block;
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 1.05rem;
+      padding: 6px 0;
+    }
+
+    .mobile-drawer a:not(.btn):hover {
+      color: var(--terracotta);
+    }
+
+    .mobile-drawer .btn {
+      width: 100%;
+      margin-top: 6px;
+    }
+
     /* BUTTONS */
     .btn {
       display: inline-flex;
@@ -456,7 +528,7 @@
       border: 1px solid var(--border-subtle);
       border-radius: 10px;
       font-family: 'Outfit', sans-serif;
-      font-size: 0.98rem;
+      font-size: 16px;
       background-color: var(--cream);
       color: var(--ink);
       transition: border-color 0.2s ease;
@@ -498,6 +570,7 @@
 
     .footer-links {
       display: flex;
+      flex-wrap: wrap;
       gap: 22px;
     }
 
@@ -511,18 +584,40 @@
     }
 
     @media (max-width: 860px) {
+      .nav-links {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .section-padding {
+        padding: 64px 0;
+      }
+
+      .hero {
+        padding: 56px 0 64px;
+      }
+
       .hero-grid,
       .about-grid,
       .contact-grid {
         grid-template-columns: 1fr;
+        gap: 32px;
       }
 
       .form-row {
         grid-template-columns: 1fr;
       }
 
-      .nav-links {
-        gap: 16px;
+      .hero-card,
+      .contact-form-card {
+        padding: 26px 22px;
+      }
+
+      .brand {
+        font-size: 1.12rem;
       }
     }
   </style>
@@ -542,6 +637,21 @@
         <li><a href="#rates">Rates</a></li>
         <li><a href="teachers.html">Teachers</a></li>
         <li><a href="#contact" class="btn btn-primary btn-sm">Book a Lesson</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="mobile-drawer" id="mobileDrawer">
+      <ul>
+        <li><a href="#instruments">Instruments</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#rates">Rates</a></li>
+        <li><a href="teachers.html">Teachers</a></li>
+        <li><a href="#contact" class="btn btn-primary">Book a Lesson</a></li>
       </ul>
     </div>
   </header>
@@ -842,6 +952,25 @@
   </footer>
 
   <script>
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mobileDrawer.classList.toggle('open');
+      menuToggle.classList.toggle('open', isOpen);
+      menuToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    mobileDrawer.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileDrawer.classList.remove('open');
+        menuToggle.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Contact Form Submission
     const lessonForm = document.getElementById('lessonForm');
     const formResult = document.getElementById('formResult');
     const submitBtn = document.getElementById('submitBtn');
